@@ -1,0 +1,246 @@
+body, code {
+	min-width: 320px;
+	line-height: 20px;
+	color: #1b1b1b;
+	background: #fff;
+	-webkit-text-size-adjust: none;
+	letter-spacing: 0;
+
+}
+html,body {
+	width: 100%;
+	font-size: 11px;
+	font-family: 'arial' ,'Nanum gothic';
+}
+#header-wrap-outer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 3;
+	background-color: #fff;
+	text-transform: uppercase;
+}
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, button, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+#header_wrap {
+	line-height: 48px;
+	font-size: 12px;
+	width: 100%;
+	border-bottom: 1px solid #000;
+	display: table;
+}
+
+.header_left {
+	float: left;
+	padding-left: 40px;
+}
+
+.logo {
+	display: inline-block;
+	vertical-align: middle;
+	*zoom: 1;
+	*display: inline;
+	margin-right: 44px;
+	font-size: 20px;
+}
+ul ul {
+	list-style-type: circle;
+	margin-block-start: 0px;
+	margin-block-end: 0px;
+}
+.inline-middle {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	vertical-align: middle;
+}
+.header_left li {
+	display: inline-block;
+	vertical-align: top;
+	*zoom: 1;
+	*display: inline;
+	margin-right: 44px;
+}
+ul li {
+	list-style: none;
+}
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+.inline-top {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	vertical-align: top;
+}
+img {
+	vertical-align: middle;
+}
+img, fieldset {
+	border: none;
+}
+#contents {
+	position: relative;
+	z-index: 0;
+	padding: 110px 40px 110px 40px;
+	margin: 0 auto;
+	max-width: 950px;
+}
+#contents {
+	max-width: 1920px!important;
+	padding-top: 90px;
+}
+.product_list_wrap {
+	position: relative;
+}
+.product_left {
+	width: 200px;
+	position: absolute;
+	top: 20px;
+}
+.product_list_title h2 {
+	font-size: 15px;
+}
+.sub_category {
+	padding-top: 30px;
+	line-height: 20px;
+}
+.sub_category .big_cate {
+	padding-bottom: 14px;
+}
+.sub_category a {
+	display: block;
+	color: #999;
+	font-size: 12px;
+}
+.product_right {
+	padding-left: 200px;
+}
+
+.product_list {
+	width: 100%;
+	display: table;
+	margin: 0 auto;
+	position: relative;
+	right: -20px;
+}
+.product_list .item {
+	width: 33.33%;
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	vertical-align: top;
+	margin: 0 -4px 0 0;
+	line-height: 20px;
+}
+.product_list .box_wrap {
+	position: relative;
+	margin: 20px;
+	text-align: center;
+}
+.product_list .item .wish {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	z-index: 5;
+}
+.product_list .thumb {
+	position: relative;
+	display: block;
+	line-height: 0;
+	font-size: 0;
+	z-index: 1;
+	margin-bottom: 20px;
+}
+.product_list .big {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+}
+.product_list .medium {
+	width: 100%;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.displaynone {
+	display: none !important;
+}
+strong {
+	font-weight: bold;
+}
+.contents span {
+	color: #000!important;
+}
+.xans-product-normalpaging {
+	padding: 30px 0 40px;
+	text-align: center;
+}
+.xans-product-normalpaging p.first {
+	margin: 0 -4px 0 0;
+}
+.xans-product-normalpaging p {
+	display: inline-block;
+	vertical-align: top;
+	*display: inline;
+	*zoom: 1;
+}
+.xans-product-normalpaging img {
+	vertical-align: top;
+}
+.xans-product-normalpaging ol {
+	display: inline-block;
+	margin: 0 -4px;
+	font-size: 0;
+	line-height: 0;
+	vertical-align: top;
+	*display: inline;
+	*zoom: 1;
+	*margin: 0;
+}
+.xans-product-normalpaging li:first-child {
+	margin-left: 0;
+}
+.xans-product-normalpaging li {
+	display: inline-block;
+	margin: 0 0 0 -1px;
+	border: 1px solid #d7d5d5;
+	font-size: 12px;
+	color: #757575;
+	vertical-align: top;
+	*display: inline;
+	*zoom: 1;
+}
+.xans-product-normalpaging li a.this {
+	padding-bottom: 6px;
+	border-bottom: 3px solid #495164;
+	color: #495164;
+}
+.xans-product-normalpaging li a {
+	display: block;
+	width: 33px;
+	padding: 9px 0;
+	font-weight: bold;
+	color: #939393;
+	line-height: 14px;
+	background: #fff;
+}
+.xans-product-normalpaging .right {
+	border-left: 1px solid #d7d5d5;
+}
+.xans-product-normalpaging p.last {
+	margin: 0 0 0 -4px;
+}

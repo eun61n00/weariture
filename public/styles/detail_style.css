@@ -1,0 +1,318 @@
+body, code {
+	min-width: 320px;
+	line-height: 20px;
+	color: #1b1b1b;
+	background: #fff;
+	-webkit-text-size-adjust: none;
+	letter-spacing: 0;
+
+}
+html,body {
+	width: 100%;
+	font-size: 11px;
+	font-family: 'arial' ,'Nanum gothic';
+}
+#header-wrap-outer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 3;
+	background-color: #fff;
+	text-transform: uppercase;
+}
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, button, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+#header_wrap {
+	line-height: 48px;
+	font-size: 12px;
+	width: 100%;
+	border-bottom: 1px solid #000;
+	display: table;
+}
+
+.header_left {
+	float: left;
+	padding-left: 40px;
+}
+
+.logo {
+	display: inline-block;
+	vertical-align: middle;
+	*zoom: 1;
+	*display: inline;
+	margin-right: 44px;
+	font-size: 20px;
+}
+ul ul {
+	list-style-type: circle;
+	margin-block-start: 0px;
+	margin-block-end: 0px;
+}
+.inline-middle {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	vertical-align: middle;
+}
+.header_left li {
+	display: inline-block;
+	vertical-align: top;
+	*zoom: 1;
+	*display: inline;
+	margin-right: 44px;
+}
+ul li {
+	list-style: none;
+}
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+.inline-top {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	vertical-align: top;
+}
+img {
+	vertical-align: middle;
+}
+img, fieldset {
+	border: none;
+}
+#contents {
+	position: relative;
+	z-index: 0;
+	padding: 110px 40px 110px 40px;
+	margin: 0 auto;
+	max-width: 950px;
+}
+#contents {
+	max-width: 1920px!important;
+}
+.detail_wrap {
+	width: 100%;
+	padding: 0;
+	position: relative;
+}
+.detail_left.pc {
+	margin-left: -10px;
+}
+.detail_left {
+	width: 60%;
+	position: relative;
+	z-index: 3;
+	background-color: #fff;
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	vertical-align: top;
+	margin-right: -5px;
+}
+.detail_left.pc li {
+	display: inline-block;
+	vertical-align: top;
+	*zoom: 1;
+	*display: inline;
+	width: 50%;
+	margin: 0 -5px -1px 0;
+	cursor: url(/img/zoom.cur),auto;
+}
+.detail_left.pc li div {
+	padding: 10px;
+}
+.detail_left.pc img {
+	width: 100%;
+}
+
+.detail_right_wrap {
+	width: 30%;
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	vertical-align: top;
+	margin-right: -5px;
+	padding-left: 9%;
+}
+
+.detail_right {
+	position: relative;
+	top: 0;
+	padding: 0 0 50px 0;
+}
+.xans-product-detail .infoArea table {
+	border: 0;
+	font-size: 12px;
+	margin: 0;
+	line-height: 20px;
+}
+.detail_info {
+	text-align: center;
+}
+table {
+	width: 100%;
+	table-layout: fixed;
+	border: 0 none;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+.xans-product-detail .infoArea th {
+	font-weight: normal;
+	color: #353535;
+	width: 115px;
+	padding: 7px 0 8px 0;
+	text-align: left;
+	vertical-align: middle;
+}
+th, td {
+	border: 0;
+	line-height: 18px;
+}
+.xans-product-detail .infoArea td {
+	padding: 7px 0 8px 0;
+	vertical-align: middle;
+}
+.detail_info td {
+	padding: 5px 0 5px 0;
+}
+
+.xans-product-detail .infoArea td .period {
+	display: block;
+	margin: 7px 0 0;
+	font-size: 11px;
+	color: #353535;
+}
+.xans-product-detail .infoArea td #span_product_price_text {
+	font-weight: normal;
+}
+input, textarea, select {
+	max-width: 100%;
+	font-size: 13px;
+	font-family: 'Nanum Gothic',Helvetica,Arial,sans-serif;
+	color: #333;
+	vertical-align: middle;
+	outline: 0;
+	border-radius: 0;
+}
+textarea, input, select {
+	vertical-align: middle;
+}
+
+.xans-product-detail .infoArea td #delivery_cost_prepaid {
+	margin: 0 0 5px;
+}
+.xans-product-detail .delv_price_B strong {
+	font-weight: normal;
+}
+table caption {
+	display: none;
+}
+.xans-product-detail .infoArea .xans-product-option tr:first-child td, .xans-product-detail .infoArea .xans-product-option .xans-product-fileoption td {
+	padding-top: 10px;
+	border-top: 1px solid #e8e8e8;
+}
+
+.xans-product-detail .infoArea .xans-product-option tr td {
+	padding: 4px 10px 4px 0;
+}
+.xans-product-detail .infoArea select {
+	width: 100%;
+	height: 24px;
+	font-size: 12px;
+	color: #353535;
+}
+select {
+	max-width: 100%;
+	height: 29px;
+	margin: 0;
+	padding: 0 20px 0 8px;
+	line-height: 29px;
+	font-size: 13px;
+	color: #333;
+	word-break: break-all;
+	font-weight: inherit;
+	border: 1px solid #d7d5d5;
+	border-radius: 0;
+	background: #fff url(//img.echosting.cafe24.com/skin/mobile/common/ico_select.gif) no-repeat 100% 49%;
+	background-size: auto 40px;
+	-webkit-appearance: none;
+}
+input, textarea, select {
+	max-width: 100%;
+	font-size: 13px;
+	font-family: 'Nanum Gothic',Helvetica,Arial,sans-serif;
+	color: #333;
+	vertical-align: middle;
+	outline: 0;
+	border-radius: 0;
+}
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+}
+select {
+	font-size: 11px;
+	max-width: 100%;
+	height: 29px;
+	line-height: 29px;
+	margin: 0;
+	padding: 0 35px 0 3px;
+	color: #353535;
+	word-break: break-all;
+	font-weight: inherit;
+	border: 1px solid #ccc;
+	background: #fff url(//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_selectbox.gif) no-repeat right center;
+	background-size: 32px 27px;
+	-webkit-border-radius: 3px;
+	-webkit-appearance: none;
+}
+textarea, input, select {
+	vertical-align: middle;
+}
+.xans-product-detail .infoArea .xans-product-option .value {
+	color: #767479;
+	word-break: break-all;
+}
+.displaynone {
+	display: none !important;
+}
+.xans-product-detail .infoArea .xans-product-option td.selectButton {
+	text-align: right;
+}
+.xans-product-detail .infoArea img {
+	vertical-align: middle;
+}
+.xans-product-detail .infoArea .guideArea {
+	position: relative;
+}
+.xans-product-detail .infoArea .guideArea .sizeGuide {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 8px 0 0;
+	background: url(//img.echosting.cafe24.com/skin/base_ko_KR/product/ico_sizeGuide.gif) no-repeat 0 3px;
+}
+.xans-product-detail .infoArea .sizeGuide a {
+	display: inline-block;
+	padding: 2px 15px 2px 24px;
+	color: #353535;
+	vertical-align: top;
+	background: url(//img.echosting.cafe24.com/skin/base_ko_KR/product/ico_sizeGuide_go.gif) no-repeat 100% 6px;
+}
+#totalProducts {
+	margin: 21px 0 0;
+}
+#totalProducts table {
+	margin: 0;
+}
