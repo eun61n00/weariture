@@ -1,14 +1,18 @@
 {
   "name": "weariture",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "환경 보존을 실천하고 개개인의 개성을 살린 옷의 가치를 추구하고 연구하는 팩토리 브랜드 컴퍼니 weariture 페이지",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
   },
-  "author": "",
+  "author": "권은빈 박상현",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }

@@ -1,33 +1,44 @@
 const express = require("express");
-const server = express();
+const path = require("path");
+const indexRouter = require('./routes/index');
+const userRouter = require('./routes/user');
 
-server.use(express.static(__dirname + "/public"));
+const app = express();
+app.set('port', process.env.PORT || 3000);
 
-server.get("/", (req, res) => {
+app.use('/', indexRouter);
+app.use('/user', userRouter);
+app.use(express.static(__dirname + "/public"));
+
+app.use((req, res, next) => {
+	res.status(404).send('Not Found');
+})
+
+app.get("/", (req, res) => {
 	res.sendFile(__dirname + "/main.html");
 });
 
-server.get("/about", (req, res) => {
+app.get("/about", (req, res) => {
 	res.sendFile(__dirname + "/about.html");
 });
 
-server.get("/product", (req, res) => {
+app.get("/product", (req, res) => {
 	res.sendFile(__dirname + "/product.html");
 });
 
-server.get("/product_review", (req, res) => {
+app.get("/product_review", (req, res) => {
 	res.sendFile(__dirname + "/product_review.html");
 });
 
-server.get("/detail", (req, res) => {
+app.get("/detail", (req, res) => {
 	res.sendFile(__dirname + "/detail.html");
 });
 
-server.use((req, res) => {
+app.use((req, res) => {
 	res.sendFile(__dirname + "/404.html");
 });
 
-server.listen(3000, (err) => {
+app.listen(app.get('port'), (err) => {
 	if (err) return console.log(err);
-	console.log("The server is listening on port 3000");
+	console.log(`The app is listening on port ${app.get('port')}`);
 });
