@@ -28,18 +28,14 @@
 						<a href="product_review">REVIEW</a>
 					</li>
 					<li>
-						<form>
-							<!-- <div id="user_id"> -->
-								<label for="user">User :</label>
-								<input type="text" name="user" id="user">
-							<!-- </div> -->
-							<!-- <div id="user_passowrd"> -->
-								<label for="pwd">Password :</label>
-								<input type="password" name="pwd" id="user">
-							<!-- </div> -->
-							<input type="submit" value=" Submit ">
-							<input type="reset" value=" Reset ">
+						<form action="/login" method="POST">
+							<input type="text" name="userId" placeholder="User Id" required>
+							<input type="password" name="password" placeholder="Password" required>
+							<input type="submit" value=" 로그인 ">
+							<!-- <input type="submit" value=" 회원가입 "> -->
+							<!-- <input type="reset" value=" Reset "> -->
 						</form>
+						<a href="/register"><button> 회원가입 </button></a>
 					</li>
 				</ul>
 			</ul>
