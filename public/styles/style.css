@@ -7,21 +7,14 @@
 	/* font-family: 'LeferiPoint-WhiteObliqueA', sans-serif; */
 }
 
-#header-wrap-outer {
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 3;
-	background-color: #fff;
-	text-transform: uppercase;
+html {
+	font-family: 'LeferiPoint-WhiteObliqueA'
 }
 
-#header_wrap {
-	/* line-height: 48px; */
-	font-size: 12px;
+body {
+	height: 100vh;
 	width: 100%;
-	border-bottom: 1px solid #000;
-	/* display: table; */
+	align-items: center;
 }
 
 .logo {
@@ -98,6 +91,15 @@ img, fieldset {
 	/* padding: 100px 0 0 0!important; */
 	width: 100%!important;
 	max-width: 1920px!important;
+}
+
+
+@media all and (min-width: 1024px) {
+	/* 1024픽셀을 넘어가는 순간부터 이 미디어 쿼리를 적용하겠다. */
+	#contents {
+		max-width: 1024px;
+		margin: 0 auto;
+	}
 }
 
 .section .box {
