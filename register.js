@@ -86,14 +86,14 @@ app.post('/register', function(request, response) {
 		connection.query('SELECT * FROM user WHERE username = ? AND password = ? AND email = ?', [username, password, email], function(error, results, fields) {
 			if (error) throw error;
 			if (results.length <= 0) {
-        connection.query('INSERT INTO user (username, password, email) VALUES(?,?,?)', [username, password, email],
-            function (error, data) {
-                if (error)
-                  console.log(error);
-                else
-                  console.log(data);
-        });
-			  response.send(username + ' Registered Successfully!<br><a href="/home">Home</a>');
+		connection.query('INSERT INTO user (username, password, email) VALUES(?,?,?)', [username, password, email],
+			function (error, data) {
+				if (error)
+					console.log(error);
+				else
+					console.log(data);
+		});
+			response.send(username + ' Registered Successfully!<br><a href="/home">Home</a>');
 			} else {
 				response.send(username + ' Already exists!<br><a href="/home">Home</a>');
 			}
@@ -133,56 +133,56 @@ app.get('/test2', function(request, response) {
 
 // Board
 app.get('/board', function (request, response) {
-    fs.readFile(__dirname + '/board/list.html', 'utf8', function (error, data) {
-        connection.query('SELECT * FROM products', function (error, results) {
-            response.send(ejs.render(data, {
-                data: results
-            }));
-        });
-    });
+	fs.readFile(__dirname + '/board/list.html', 'utf8', function (error, data) {
+		connection.query('SELECT * FROM products', function (error, results) {
+			response.send(ejs.render(data, {
+				data: results
+			}));
+		});
+	});
 });
 app.get('/delete/:id', function (request, response) {
-    connection.query('DELETE FROM products WHERE id=?', [request.params('id')], function () {
-        response.redirect('/board');
-    });
+	connection.query('DELETE FROM products WHERE id=?', [request.params('id')], function () {
+		response.redirect('/board');
+	});
 });
 app.get('/insert', function (request, response) {
-    fs.readFile(__dirname + '/board/insert.html', 'utf8', function (error, data) {
-        response.send(data);
-    });
+	fs.readFile(__dirname + '/board/insert.html', 'utf8', function (error, data) {
+		response.send(data);
+	});
 });
 app.post('/insert', function (request, response) {
-    var body = request.body;
+	var body = request.body;
 
-    connection.query('INSERT INTO products (name, modelnumber, series) VALUES (?, ?, ?)', [
-        body.name, body.modelnumber, body.series
-    ], function () {
-        response.redirect('/board');
-    });
+	connection.query('INSERT INTO products (name, modelnumber, series) VALUES (?, ?, ?)', [
+		body.name, body.modelnumber, body.series
+	], function () {
+		response.redirect('/board');
+	});
 });
 app.get('/edit/:id', function (request, response) {
-	    // ������ �н��ϴ�.
-    fs.readFile(__dirname + '/board/edit.html', 'utf8', function (error, data) {
-        connection.query('SELECT * FROM products WHERE id = ?', [
-            request.params('id')
-        ], function (error, result) {
-            response.send(ejs.render(data, {
-                data: result[0]
-            }));
-        });
-    });
+		// ������ �н��ϴ�.
+	fs.readFile(__dirname + '/board/edit.html', 'utf8', function (error, data) {
+		connection.query('SELECT * FROM products WHERE id = ?', [
+			request.params('id')
+		], function (error, result) {
+			response.send(ejs.render(data, {
+				data: result[0]
+			}));
+		});
+	});
 });
 app.post('/edit/:id', function (request, response) {
-    var body = request.body
+	var body = request.body
 
-    connection.query('UPDATE products SET name=?, modelnumber=?, series=? WHERE id=?', [
-        body.name, body.modelnumber, body.series, request.params('id')
-    ], function () {
-        response.redirect('/board');
-    });
+	connection.query('UPDATE products SET name=?, modelnumber=?, series=? WHERE id=?', [
+		body.name, body.modelnumber, body.series, request.params('id')
+	], function () {
+		response.redirect('/board');
+	});
 });
 
 
 app.listen(3000, function () {
-    console.log('Server Running at http://127.0.0.1:3000');
+	console.log('Server Running at http://127.0.0.1:3000');
 });
