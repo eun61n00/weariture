@@ -1,11 +1,12 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser')
+var cookieParser = require('cookie-parser')
 const mysql = require('mysql');
 const session = require('express-session');
 const { appendFile } = require('fs');
-const { request } = require('http');
-const { response } = require('express');
+const { req } = require('http');
+const { res } = require('express');
 
 const connection = mysql.createConnection({
 	host     : 'localhost',
@@ -22,9 +23,11 @@ router.use(session({
 }));
 
 let rootdir = process.env.PWD + "/src/html/";
-router.use(express.static(rootdir + "/public"));
+// let rootdir = process.env.PWD;
+router.use('/static', express.static(__dirname + '/public'));
 router.use(bodyParser.urlencoded({extended : true}));
 router.use(bodyParser.json());
+router.use(cookieParser());
 
 function restrict(req, res, next) {
 	if (req.session.loggedin) {
@@ -35,18 +38,22 @@ function restrict(req, res, next) {
 	}
 }
 
-router.use('/', function(request, response, next) {
-	if ( request.session.loggedin == true || request.url == "/login" || request.url == "/register" ) {
+router.use('/', function(req, res, next) {
+	if ( req.session.loggedin == true || req.url == "/login" || req.url == "/register" ) {
 		next();
 	}
 	else {
-		response.sendFile(path.join(rootdir + '/main.html'));
+		res.sendFile(path.join(rootdir + '/main.html'));
 	}
 });
 
 router.get("/", (req, res) => {
-	res.sendFile(rootdir + "/main.html");
-	// res.send("hello index");
+	if (req.session.loggedin) {
+		// res.sendFile(rootdir + "/main.html");
+		res.render(rootdir + "/main.html", {loggedin: true});
+	} else {
+		res.render(rootdir + "/main.html", {loggedin: false});
+	}
 });
 
 router.get("/about", (req, res) => {
@@ -104,30 +111,30 @@ router.post('/register', function(req, res) {
 	}
 });
 
-router.get('/login', function(request, response) {
-	response.sendFile(path.join(__dirname + '/login.html'));
+router.get('/login', function(req, res) {
+	res.sendFile(path.join(__dirname + '/login.html'));
 });
 
-router.post('/login', function(request, response) {
-	var username = request.body.id;
-	var password = request.body.password;
+router.post('/login', function(req, res) {
+	var username = req.body.id;
+	var password = req.body.password;
 	console.log(username, password);
 	if (username && password) {
 		connection.query('SELECT * FROM user WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
 			if (error) throw error;
 			if (results.length > 0) {
-				request.session.loggedin = true;
-				request.session.username = username;
-				response.redirect('/');
-				response.end();
+				req.session.loggedin = true;
+				req.session.username = username;
+				res.redirect('/');
+				res.end();
 			} else {
-				//response.send('Incorrect Username and/or Password!');
-				response.sendFile(path.join(__dirname + '/loginerror.html'));
+				//res.send('Incorrect Username and/or Password!');
+				res.sendFile(path.join(rootdir + '/loginerror.html'));
 			}
 		});
 	} else {
-		response.send('Please enter Username and Password!');
-		response.end();
+		res.send('Please enter Username and Password!');
+		res.end();
 	}
 });
 
