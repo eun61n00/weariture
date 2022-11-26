@@ -1,11 +1,12 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser')
+var cookieParser = require('cookie-parser')
 const mysql = require('mysql');
 const session = require('express-session');
 const { appendFile } = require('fs');
-const { request } = require('http');
-const { response } = require('express');
+const { req } = require('http');
+const { res } = require('express');
 
 const connection = mysql.createConnection({
 	host     : 'localhost',
@@ -21,10 +22,11 @@ router.use(session({
 	saveUninitialized: true,
 }));
 
-let rootdir = process.env.PWD + "/src/html/";
-// router.use(express.static(rootdir + "/public"));
+let rootdir = process.env.PWD;
+router.use('/static', express.static(rootdir + '/public'));
 router.use(bodyParser.urlencoded({extended : true}));
 router.use(bodyParser.json());
+router.use(cookieParser());
 
 function restrict(req, res, next) {
 	if (req.session.loggedin) {
@@ -45,7 +47,12 @@ function restrict(req, res, next) {
 // });
 
 router.get("/", (req, res) => {
-	res.sendFile(rootdir + "/main.html");
+	if (req.session.loggedin) {
+		// res.sendFile(rootdir + "/main.html");
+		res.render(rootdir + "/main.html", {loggedin: true});
+	} else {
+		res.render(rootdir + "/main.html", {loggedin: false});
+	}
 });
 
 router.get("/about", (req, res) => {

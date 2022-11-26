@@ -62,7 +62,7 @@ app.post('/login', function(request, response) {
 				response.redirect('/home');
 				response.end();
 			} else {
-				//response.send('Incorrect Username and/or Password!');
+				response.send('Incorrect Username and/or Password!');
 				response.sendFile(path.join(__dirname + '/loginerror.html'));
 			}
 		});
