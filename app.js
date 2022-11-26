@@ -17,13 +17,13 @@ app.use(session({
 	saveUninitialized: true
 }));
 
-app.use('/', indexRouter);
-app.use('/user', userRouter);
-
 app.listen(app.get('port'), (err) => {
 	if (err) return console.log(err);
 	console.log(`The app is listening on port ${app.get('port')}`);
 });
+
+app.use('/', indexRouter);
+app.use('/user', userRouter);
 
 app.use((req, res, next) => {
 	res.status(404).send('Not Found');
