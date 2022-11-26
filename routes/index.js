@@ -22,6 +22,7 @@ router.use(session({
 	saveUninitialized: true,
 }));
 
+<<<<<<< HEAD
 let rootdir = process.env.PWD + "/src/html/";
 <<<<<<< HEAD
 // let rootdir = process.env.PWD;
@@ -29,6 +30,10 @@ router.use('/static', express.static(__dirname + '/public'));
 =======
 // router.use(express.static(rootdir + "/public"));
 >>>>>>> 33be01611c9d651293de1e35d00ea5440945dcca
+=======
+let rootdir = process.env.PWD;
+router.use('/static', express.static(rootdir + '/public'));
+>>>>>>> a06d4d512ded11342c7c28433849d168f59960cd
 router.use(bodyParser.urlencoded({extended : true}));
 router.use(bodyParser.json());
 router.use(cookieParser());
@@ -42,6 +47,7 @@ function restrict(req, res, next) {
 	}
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 router.use('/', function(req, res, next) {
 	if ( req.session.loggedin == true || req.url == "/login" || req.url == "/register" ) {
@@ -60,6 +66,8 @@ router.get("/", (req, res) => {
 		res.render(rootdir + "/main.html", {loggedin: false});
 	}
 =======
+=======
+>>>>>>> a06d4d512ded11342c7c28433849d168f59960cd
 // router.use('/', function(request, response, next) {
 // 	if ( request.session.loggedin == true || request.url == "/login" || request.url == "/register" ) {
 // 		next();
@@ -70,8 +78,17 @@ router.get("/", (req, res) => {
 // });
 
 router.get("/", (req, res) => {
+<<<<<<< HEAD
 	res.sendFile(rootdir + "/main.html");
 >>>>>>> 33be01611c9d651293de1e35d00ea5440945dcca
+=======
+	if (req.session.loggedin) {
+		// res.sendFile(rootdir + "/main.html");
+		res.render(rootdir + "/main.html", {loggedin: true});
+	} else {
+		res.render(rootdir + "/main.html", {loggedin: false});
+	}
+>>>>>>> a06d4d512ded11342c7c28433849d168f59960cd
 });
 
 router.get("/about", (req, res) => {
@@ -90,6 +107,7 @@ router.get("/detail", (req, res) => {
 	res.sendFile(rootdir + "/detail.html");
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 router.get('/register', (req, res) => {
 	res.sendFile(rootdir + "/register.html");
@@ -159,4 +177,6 @@ router.post('/login', function(req, res) {
 
 =======
 >>>>>>> 33be01611c9d651293de1e35d00ea5440945dcca
+=======
+>>>>>>> a06d4d512ded11342c7c28433849d168f59960cd
 module.exports = router;
