@@ -2,8 +2,9 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require('body-parser');
 const session = require('express-session');
-const nunjucks = require('nunjucks');
 const dotenv = require('dotenv');
+const morgan= require('morgan');
+const passport = require('passport');
 
 dotenv.config();
 const indexRouter = require('./routes/index');
@@ -12,11 +13,9 @@ const cookieParser = require("cookie-parser");
 
 const app = express();
 app.set('port', process.env.PORT || 3000);
+app.set('views', path.join(__dirname + '/views'));
+app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
-nunjucks.configure('views', {
-	express: app,
-	watch: true,
-})
 
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -32,6 +31,11 @@ app.use(session({
 		secure: false,
 	}
 }));
+
+// passport 미들웨어 등록
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use('/', indexRouter);
 app.use('/user', userRouter);
 
@@ -45,10 +49,9 @@ app.use((err, req, res, next) => {
 	res.locals.message = err.message;
 	res.locals.error = process.env.NODE_ENV !== 'production' ? err : {};
 	res.status(err.status || 500);
-	res.render('error');
+	res.render('404.html');
 })
 
 app.listen(app.get('port'), (err) => {
-	if (err) return console.log(err);
 	console.log(`The app is listening on port ${app.get('port')}`);
 });

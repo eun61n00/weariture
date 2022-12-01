@@ -10,6 +10,7 @@
   "author": "권은빈 박상현",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "body-parser": "^1.20.1",
     "bootstrap": "^5.2.2",
     "bootstrap-icons": "^1.10.2",
@@ -23,6 +24,10 @@
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "nunjucks": "^3.2.3",
+    "nunjucks-bootstrap": "^0.2.0",
+    "passport": "^0.6.0",
+    "passport-kakao": "^1.0.1",
+    "passport-local": "^1.0.0",
     "sequelize": "^6.25.8",
     "sequelize-cli": "^6.5.2"
   },
