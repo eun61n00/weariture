@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weariture</title>
+]	<link href="./styles/style.css" rel="stylesheet">
+	<link href="./styles/product_style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/ab43b8042e.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="layout">
+	<div class="nav-container">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a href="/"><img src="./images/logo.png" style="height:35px; margin:0px 40px"></a>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="about">About</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Product
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="product">Top</a></li>
+							<li><a class="dropdown-item" href="product">Bottom</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="product_review">Review</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="product">Products</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+						</li>
+					</ul>
+					<div id="user" class="d-flex">
+						<form class="d-flex" action="/user/login" method="post">
+							<input class="form-control me-2" type="userId" placeholder="ID" aria-label="ID" name="id">
+							<input class="form-control me-2" type="userPassword" placeholder="Password" aria-label="Password" name="password">
+							<button class="btn btn-outline-success" type="submit" style="margin: 0px 7px 0px 0px">Login</button>
+						</form>
+						<form class="d-flex" action="/user/register" method="get">
+							<button class="btn btn-outline-success" type="submit">Join</button>
+						</form>
+						<!-- <a href="/user/register"><button class="btn btn-outline-success" type="submit">Join</button></a> -->
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div id="contents">
+		<style> .contents span{color: #000!important;}</style>
+		<div class="product_list_wrap">
+			<div class="xans-element- xans-product xans-product-menupackage product_left ">
+				<div class="xans-element- xans-product xans-product-headcategory product_list_title ">
+					<h2>ALL</h2>
+				</div>
+				<div class="sub_category">
+					<ul class="menuCategory">
+						<li class="xans-element- xans-product xans-product-displaycategory  xans-record-">
+							<a href="" class="big_cate">
+								TOP
+								<span class="count ">(243)</span>
+							</a>
+						</li>
+						<li class="xans-element- xans-product xans-product-displaycategory  xans-record-">
+							<a href="" class="big_cate">
+								BOTTOM
+								<span class="count ">(33)</span>
+							</a>
+						</li>
+
+						<li>
+							<span style="font-size: 17px;color:#898989;">
+								Select your color:<br>
+								<input type="color" id="user_color_input" value="#000000"><button id="color_change">변경</button><br>
+							</span>
+						</li>
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="product_right">
+			<div class="xans-element- xans-product xans-product-listnormal product_list">
+				<ul class="prdList column4">
+					<li id="anchorBoxId_976" class="item xans-record-">
+						<div class="box_wrap">
+							<span class="wish"></span>
+							<div class="images_box">
+								<a href="detail" name="anchorBoxName_976" class="thumb">
+									<img src="./images/1.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="big">
+									" &nbsp;"
+									<img src="./images/1.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="medium" style="opacity: 0; display: inline;">
+									" &nbsp;"
+								</a>
+							</div>
+							<a href="detail" class="name">
+								<span class="title displayone">
+									<span style="font-size: 12px;color:#000000;"></span>
+								</span>
+								<span style="font-size: 12px; color:#000000;">51040 CANDIANI BIKAL JEANS [LONG WIDE STRAIGHT]</span>
+							</a>
+							<div class="icon"></div>
+							<div class="contents">
+								<ul class="xans-element- xans-product xans-product-listitem">
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">박상현</span>
+										<span id="span_product_tax_type_text" style="text-decoration:line-through;"></span>
+									</li>
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">&#8361;97,850</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li id="anchorBoxId_975" class="item xans-record-">
+						<div class="box_wrap">
+							<span class="wish"></span>
+							<div class="images_box">
+								<a href="detail" name="anchorBoxName_976" class="thumb">
+									<img src="./images/2.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="big">
+									" &nbsp;"
+									<img src="./images/2.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="medium" style="opacity: 0; display: inline;">
+									" &nbsp;"
+								</a>
+							</div>
+							<a href="detail" class="name">
+								<span class="title displayone">
+									<span style="font-size: 12px;color:#000000;"></span>
+								</span>
+								<span style="font-size: 12px; color:#000000;">51037 CONE MYSTIC JEANS [EXTRA WIDE STRAIGHT]</span>
+							</a>
+							<div class="icon"></div>
+							<div class="contents">
+								<ul class="xans-element- xans-product xans-product-listitem">
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">김창엽</span>
+										<span id="span_product_tax_type_text" style="text-decoration:line-through;"></span>
+									</li>
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">&#8361;97,850</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li id="anchorBoxId_974" class="item xans-record-">
+						<div class="box_wrap">
+							<span class="wish"></span>
+							<div class="images_box">
+								<a href="detail" name="anchorBoxName_976" class="thumb">
+									<img src="./images/3.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="big">
+									" &nbsp;"
+									<img src="./images/3.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="medium" style="opacity: 0; display: inline;">
+									" &nbsp;"
+								</a>
+							</div>
+							<a href="detail" class="name">
+								<span class="title displayone">
+									<span style="font-size: 12px;color:#000000;"></span>
+								</span>
+								<span style="font-size: 12px; color:#000000;">2010 MAROON DENIM JACKET [BROWN]</span>
+							</a>
+							<div class="icon"></div>
+							<div class="contents">
+								<ul class="xans-element- xans-product xans-product-listitem">
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">조장훈</span>
+										<span id="span_product_tax_type_text" style="text-decoration:line-through;"></span>
+									</li>
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">&#8361;97,850</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li id="anchorBoxId_973" class="item xans-record-">
+						<div class="box_wrap">
+							<span class="wish"></span>
+							<div class="images_box">
+								<a href="detail" name="anchorBoxName_976" class="thumb">
+									<img src="./images/4.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="big">
+									" &nbsp;"
+									<img src="./images/4.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="medium" style="opacity: 0; display: inline;">
+									" &nbsp;"
+								</a>
+							</div>
+							<a href="detail" class="name">
+								<span class="title displayone">
+									<span style="font-size: 12px;color:#000000;"></span>
+								</span>
+								<span style="font-size: 12px; color:#000000;">51036 CONE ONYX JEANS [EXTRA WIDE STRAIGHT]</span>
+							</a>
+							<div class="icon"></div>
+							<div class="contents">
+								<ul class="xans-element- xans-product xans-product-listitem">
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">이은송</span>
+										<span id="span_product_tax_type_text" style="text-decoration:line-through;"></span>
+									</li>
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">&#8361;97,850</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li id="anchorBoxId_972" class="item xans-record-">
+						<div class="box_wrap">
+							<span class="wish"></span>
+							<div class="images_box">
+								<a href="detail" name="anchorBoxName_976" class="thumb">
+									<img src="./images/5.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="big">
+									" &nbsp;"
+									<img src="./images/5.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="medium" style="opacity: 0; display: inline;">
+									" &nbsp;"
+								</a>
+							</div>
+							<a href="detail" class="name">
+								<span class="title displayone">
+									<span style="font-size: 12px;color:#000000;"></span>
+								</span>
+								<span style="font-size: 12px; color:#000000;">1989 FALCON JEANS [CROP SLIM]</span>
+							</a>
+							<div class="icon"></div>
+							<div class="contents">
+								<ul class="xans-element- xans-product xans-product-listitem">
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">박상현</span>
+										<span id="span_product_tax_type_text" style="text-decoration:line-through;"></span>
+									</li>
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">&#8361;97,850</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li id="anchorBoxId_971" class="item xans-record-">
+						<div class="box_wrap">
+							<span class="wish"></span>
+							<div class="images_box">
+								<a href="detail" name="anchorBoxName_976" class="thumb">
+									<img src="./images/6.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="big">
+									" &nbsp;"
+									<img src="./images/6.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="medium" style="opacity: 0; display: inline;">
+									" &nbsp;"
+								</a>
+							</div>
+							<a href="detail" class="name">
+								<span class="title displayone">
+									<span style="font-size: 12px;color:#000000;"></span>
+								</span>
+								<span style="font-size: 12px; color:#000000;">1885 MAROON JEANS [WIDE STRAIGHT]</span>
+							</a>
+							<div class="icon"></div>
+							<div class="contents">
+								<ul class="xans-element- xans-product xans-product-listitem">
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">박상현</span>
+										<span id="span_product_tax_type_text" style="text-decoration:line-through;"></span>
+									</li>
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">&#8361;97,850</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li id="anchorBoxId_970" class="item xans-record-">
+						<div class="box_wrap">
+							<span class="wish"></span>
+							<div class="images_box">
+								<a href="detail" name="anchorBoxName_976" class="thumb">
+									<img src="./images/7.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="big">
+									" &nbsp;"
+									<img src="./images/7.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="medium" style="opacity: 0; display: inline;">
+									" &nbsp;"
+								</a>
+							</div>
+							<a href="detail" class="name">
+								<span class="title displayone">
+									<span style="font-size: 12px;color:#000000;"></span>
+								</span>
+								<span style="font-size: 12px; color:#000000;">1827 NIGHTHAWK JEANS [CROP STRAIGHT]</span>
+							</a>
+							<div class="icon"></div>
+							<div class="contents">
+								<ul class="xans-element- xans-product xans-product-listitem">
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">박상현</span>
+										<span id="span_product_tax_type_text" style="text-decoration:line-through;"></span>
+									</li>
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">&#8361;97,850</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li id="anchorBoxId_969" class="item xans-record-">
+						<div class="box_wrap">
+							<span class="wish"></span>
+							<div class="images_box">
+								<a href="detail" name="anchorBoxName_976" class="thumb">
+									<img src="./images/8.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="big">
+									" &nbsp;"
+									<img src="./images/8.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="medium" style="opacity: 0; display: inline;">
+									" &nbsp;"
+								</a>
+							</div>
+							<a href="detail" class="name">
+								<span class="title displayone">
+									<span style="font-size: 12px;color:#000000;"></span>
+								</span>
+								<span style="font-size: 12px; color:#000000;">1811 VINTAGE INK JEANS [VINTAGE STRAIGHT]</span>
+							</a>
+							<div class="icon"></div>
+							<div class="contents">
+								<ul class="xans-element- xans-product xans-product-listitem">
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">박상현</span>
+										<span id="span_product_tax_type_text" style="text-decoration:line-through;"></span>
+									</li>
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">&#8361;97,850</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li id="anchorBoxId_968" class="item xans-record-">
+						<div class="box_wrap">
+							<span class="wish"></span>
+							<div class="images_box">
+								<a href="detail" name="anchorBoxName_976" class="thumb">
+									<img src="./images/9.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="big">
+									" &nbsp;"
+									<img src="./images/9.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="medium" style="opacity: 0; display: inline;">
+									" &nbsp;"
+								</a>
+							</div>
+							<a href="detail" class="name">
+								<span class="title displayone">
+									<span style="font-size: 12px;color:#000000;"></span>
+								</span>
+								<span style="font-size: 12px; color:#000000;">605 HARD TWIST DENIM MOCHA BROWN JEANS [RELAX</span>
+							</a>
+							<div class="icon"></div>
+							<div class="contents">
+								<ul class="xans-element- xans-product xans-product-listitem">
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">박상현</span>
+										<span id="span_product_tax_type_text" style="text-decoration:line-through;"></span>
+									</li>
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">&#8361;97,850</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li id="anchorBoxId_967" class="item xans-record-">
+						<div class="box_wrap">
+							<span class="wish"></span>
+							<div class="images_box">
+								<a href="detail" name="anchorBoxName_976" class="thumb">
+									<img src="./images/10.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="big">
+									" &nbsp;"
+									<img src="./images/10.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="medium" style="opacity: 0; display: inline;">
+									" &nbsp;"
+								</a>
+							</div>
+							<a href="detail" class="name">
+								<span class="title displayone">
+									<span style="font-size: 12px;color:#000000;"></span>
+								</span>
+								<span style="font-size: 12px; color:#000000;">604 HARD TWIST DENIM BLACK WASHED JEANS [RELAX]</span>
+							</a>
+							<div class="icon"></div>
+							<div class="contents">
+								<ul class="xans-element- xans-product xans-product-listitem">
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">박상현</span>
+										<span id="span_product_tax_type_text" style="text-decoration:line-through;"></span>
+									</li>
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">&#8361;97,850</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li id="anchorBoxId_964" class="item xans-record-">
+						<div class="box_wrap">
+							<span class="wish"></span>
+							<div class="images_box">
+								<a href="detail" name="anchorBoxName_976" class="thumb">
+									<img src="./images/11.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="big">
+									" &nbsp;"
+									<img src="./images/11.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="medium" style="opacity: 0; display: inline;">
+									" &nbsp;"
+								</a>
+							</div>
+							<a href="detail" class="name">
+								<span class="title displayone">
+									<span style="font-size: 12px;color:#000000;"></span>
+								</span>
+								<span style="font-size: 12px; color:#000000;">603 HARD TWIST DENIM BLACK 1WASH JEANS [RELAX</span>
+							</a>
+							<div class="icon"></div>
+							<div class="contents">
+								<ul class="xans-element- xans-product xans-product-listitem">
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">박상현</span>
+										<span id="span_product_tax_type_text" style="text-decoration:line-through;"></span>
+									</li>
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">&#8361;97,850</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li id="anchorBoxId_963" class="item xans-record-">
+						<div class="box_wrap">
+							<span class="wish"></span>
+							<div class="images_box">
+								<a href="detail" name="anchorBoxName_976" class="thumb">
+									<img src="./images/12.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="big">
+									" &nbsp;"
+									<img src="./images/12.jpg".jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="medium" style="opacity: 0; display: inline;">
+									" &nbsp;"
+								</a>
+							</div>
+							<a href="detail" class="name">
+								<span class="title displayone">
+									<span style="font-size: 12px;color:#000000;"></span>
+								</span>
+								<span style="font-size: 12px; color:#000000;">602 HARD TWIST DENIM INDIGO 1WASH JEANS [RELAX</span>
+							</a>
+							<div class="icon"></div>
+							<div class="contents">
+								<ul class="xans-element- xans-product xans-product-listitem">
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">박상현</span>
+										<span id="span_product_tax_type_text" style="text-decoration:line-through;"></span>
+									</li>
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">&#8361;97,850</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li id="anchorBoxId_962" class="item xans-record-">
+						<div class="box_wrap">
+							<span class="wish"></span>
+							<div class="images_box">
+								<a href="detail" name="anchorBoxName_976" class="thumb">
+									<img src="./images/13.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="big">
+									" &nbsp;"
+									<img src="./images/13.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="medium" style="opacity: 0; display: inline;">
+									" &nbsp;"
+								</a>
+							</div>
+							<a href="detail" class="name">
+								<span class="title displayone">
+									<span style="font-size: 12px;color:#000000;"></span>
+								</span>
+								<span style="font-size: 12px; color:#000000;">51035 HISHITOMO DUEN JEANS [RELAX STRAIGHT]</span>
+							</a>
+							<div class="icon"></div>
+							<div class="contents">
+								<ul class="xans-element- xans-product xans-product-listitem">
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">박상현</span>
+										<span id="span_product_tax_type_text" style="text-decoration:line-through;"></span>
+									</li>
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">&#8361;97,850</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li id="anchorBoxId_961" class="item xans-record-">
+						<div class="box_wrap">
+							<span class="wish"></span>
+							<div class="images_box">
+								<a href="detail" name="anchorBoxName_976" class="thumb">
+									<img src="./images/14.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="big">
+									" &nbsp;"
+									<img src="./images/14.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="medium" style="opacity: 0; display: inline;">
+									" &nbsp;"
+								</a>
+							</div>
+							<a href="detail" class="name">
+								<span class="title displayone">
+									<span style="font-size: 12px;color:#000000;"></span>
+								</span>
+								<span style="font-size: 12px; color:#000000;">2010 MAROON DENIM JACKET [BROWN]</span>
+							</a>
+							<div class="icon"></div>
+							<div class="contents">
+								<ul class="xans-element- xans-product xans-product-listitem">
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">박상현</span>
+										<span id="span_product_tax_type_text" style="text-decoration:line-through;"></span>
+									</li>
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">&#8361;97,850</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li id="anchorBoxId_960" class="item xans-record-">
+						<div class="box_wrap">
+							<span class="wish"></span>
+							<div class="images_box">
+								<a href="detail" name="anchorBoxName_976" class="thumb">
+									<img src="./images/15.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="big">
+									" &nbsp;"
+									<img src="./images/15.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="medium" style="opacity: 0; display: inline;">
+									" &nbsp;"
+								</a>
+							</div>
+							<a href="detail" class="name">
+								<span class="title displayone">
+									<span style="font-size: 12px;color:#000000;"></span>
+								</span>
+								<span style="font-size: 12px; color:#000000;">51024 KURABO BLACK WASHED JEANS [ONE TUCK WIDE]</span>
+							</a>
+							<div class="icon"></div>
+							<div class="contents">
+								<ul class="xans-element- xans-product xans-product-listitem">
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">박상현</span>
+										<span id="span_product_tax_type_text" style="text-decoration:line-through;"></span>
+									</li>
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">&#8361;97,850</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li id="anchorBoxId_959" class="item xans-record-">
+						<div class="box_wrap">
+							<span class="wish"></span>
+							<div class="images_box">
+								<a href="detail" name="anchorBoxName_976" class="thumb">
+									<img src="./images/16.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="big">
+									" &nbsp;"
+									<img src="./images/16.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="medium" style="opacity: 0; display: inline;">
+									" &nbsp;"
+								</a>
+							</div>
+							<a href="detail" class="name">
+								<span class="title displayone">
+									<span style="font-size: 12px;color:#000000;"></span>
+								</span>
+								<span style="font-size: 12px; color:#000000;">51023 KURABO LIGHT BLUE JEANS [ONE TUCK WIDE]</span>
+							</a>
+							<div class="icon"></div>
+							<div class="contents">
+								<ul class="xans-element- xans-product xans-product-listitem">
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">박상현</span>
+										<span id="span_product_tax_type_text" style="text-decoration:line-through;"></span>
+									</li>
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">&#8361;97,850</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li id="anchorBoxId_957" class="item xans-record-">
+						<div class="box_wrap">
+							<span class="wish"></span>
+							<div class="images_box">
+								<a href="detail" name="anchorBoxName_976" class="thumb">
+									<img src="./images/17.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="big">
+									" &nbsp;"
+									<img src="./images/17.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="medium" style="opacity: 0; display: inline;">
+									" &nbsp;"
+								</a>
+							</div>
+							<a href="detail" class="name">
+								<span class="title displayone">
+									<span style="font-size: 12px;color:#000000;"></span>
+								</span>
+								<span style="font-size: 12px; color:#000000;">51022 CONE MOOD INDIGO JEANS [WIDE STRAIGHT]</span>
+							</a>
+							<div class="icon"></div>
+							<div class="contents">
+								<ul class="xans-element- xans-product xans-product-listitem">
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">박상현</span>
+										<span id="span_product_tax_type_text" style="text-decoration:line-through;"></span>
+									</li>
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">&#8361;97,850</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li id="anchorBoxId_956" class="item xans-record-">
+						<div class="box_wrap">
+							<span class="wish"></span>
+							<div class="images_box">
+								<a href="detail" name="anchorBoxName_976" class="thumb">
+									<img src="./images/18.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="big">
+									" &nbsp;"
+									<img src="./images/18.jpg" id="eListPrdImage976_1" alt="2010 MAROON DENIM JACKET [BROWN]" class="medium" style="opacity: 0; display: inline;">
+									" &nbsp;"
+								</a>
+							</div>
+							<a href="detail" class="name">
+								<span class="title displayone">
+									<span style="font-size: 12px;color:#000000;"></span>
+								</span>
+								<span style="font-size: 12px; color:#000000;">51021 KURABO GHOST MIND JEANS [CROP STRAIGHT]</span>
+							</a>
+							<div class="icon"></div>
+							<div class="contents">
+								<ul class="xans-element- xans-product xans-product-listitem">
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">박상현</span>
+										<span id="span_product_tax_type_text" style="text-decoration:line-through;"></span>
+									</li>
+									<li class="xans-record-">
+										<strong class="title displayone">
+											<span style="font-size: 12px;color:#9e9e9e;"></span>
+
+										</strong>
+										<span style="font-size: 12px;color:#9e9e9e;">&#8361;97,850</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="xans-element- xans-product xans-product-normalpaging">
+				<p class="first">
+					<a href="#none">
+						<img src="./images/btn_page_first.gif" alt="첫페이지">
+					</a>
+				</p>
+				<p>
+					<a href="#none">
+						<img src="./images/btn_page_prev.gif" alt="이전 페이지">
+					</a>
+				</p>
+				<ol>
+					<li class="xans-record-"><a href="/" class="this">1</a></li>
+					<li class="xans-record-"><a href="/" class="this">2</a></li>
+					<li class="xans-record-"><a href="/" class="this">3</a></li>
+					<li class="xans-record-"><a href="/" class="this">4</a></li>
+					<li class="xans-record-"><a href="/" class="this">5</a></li>
+				</ol>
+				<p class="right">
+					<a href="/"><img src="./images/btn_page_next.gif" alt="다음 페이지"></a>
+				</p>
+				<p class="right last">
+					<a href="/"><img src="./images/btn_page_last.gif" alt="마지막 페이지"></a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="text-center text-lg-start bg-light text-muted">±
+		<!-- Section: Social media -->
+		<section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+			<!-- Left -->
+			<div class="me-5 d-none d-lg-block">
+			<span>Get connected with us on social networks:</span>
+			</div>
+			<div>
+				<a href="https://www.seoultech.ac.kr/index.jsp" class="me-4 text-reset">
+					<i class="fab fa-instagram">Instagram</i>
+				</a>
+				<a href="https://www.youtube.com/@seoultech486" class="me-4 text-reset">
+					<i class="fab fa-youtube">Youtube</i>
+				</a>
+				<a href="https://github.com/eun61n00/weariture" class="me-4 text-reset">
+					<i class="fab fa-github">Github</i>
+				</a>
+			</div>
+		</section>
+
+		<!-- Section: Links -->
+		<section class="">
+			<div class="container text-center text-md-start mt-5">
+				<div class="row mt-3">
+					<!-- Grid column -->
+					<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+					<!-- Content -->
+						<h6 class="text-uppercase fw-bold mb-4">
+							<i class="bi bi-building"></i>(주)웨어네이처 인더스트리
+						</h6>
+						<p>
+							환경 보존을 실천하고 개개인의 개성을 살린 옷의 가치를 추구하고 연구하는 팩토리 브랜드 컴퍼니입니다.<br />
+							<p class="fw-bold">OWNER</p>
+							<p>권은빈 박상현</p>
+						</p>
+					</div>
+
+					<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+						<h6 class="text-uppercase fw-bold mb-4">
+							BUSINESS LICENSE
+						</h6>
+						<p>457-81-15987</p>
+						<h6 class="text-uppercase fw-bold mb-4">
+							ONLINE LICENSE
+						</h6>
+						<p>2022-서울노원-0785</p>
+					</div>
+					<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+						<h6 class="text-uppercase fw-bold mb-4">
+							Bank info
+						</h6>
+						<p>신한은행 100-034-100154</p>
+						<p>(주)웨어네이처</p>
+					</div>
+
+					<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+					<h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+						<p><i class="fas fa-home me-3"></i>서울시 노원구 공릉로 232 서울과학기술대학교</p>
+						<p>
+							<i class="fas fa-envelope me-3"></i>
+							info@weariture.com
+						</p>
+						<p><i class="fas fa-phone me-3"></i>
+							02) 970-6114 (MON-FRI 10:00 - 18:00)
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Copyright -->
+		<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+			© 2022 COPYRIGHT WEARITURE INDUSTRY, ALL RIGHTS RESERVED.
+			<a class="text-reset fw-bold" href="main">weariture.com</a>
+		</div>
+	</footer>
+	<script type="text/javascript" src="./user_color_input.js" />
+</body>
+</html>
