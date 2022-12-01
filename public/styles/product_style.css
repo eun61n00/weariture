@@ -82,10 +82,10 @@ a {
 	*display: inline;
 	vertical-align: top;
 }
-img {
+images {
 	vertical-align: middle;
 }
-img, fieldset {
+images, fieldset {
 	border: none;
 }
 #contents {
@@ -198,7 +198,7 @@ strong {
 	*display: inline;
 	*zoom: 1;
 }
-.xans-product-normalpaging img {
+.xans-product-normalpaging images {
 	vertical-align: top;
 }
 .xans-product-normalpaging ol {

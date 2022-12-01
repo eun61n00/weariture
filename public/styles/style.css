@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-size: 11px;
+	font-size: 15px;
 	font-family: 'arial', 'Nanum gothic';
 	/* font-family: 'LeferiPoint-WhiteObliqueA', sans-serif; */
 }
@@ -47,11 +47,11 @@ a {
 	vertical-align: top;
 }
 
-img {
+images {
 	vertical-align: middle;
 }
 
-img, fieldset {
+images, fieldset {
 	border: none;
 }
 
@@ -109,7 +109,7 @@ img, fieldset {
 	margin-right: -5px;
 }
 
-.section img {
+.section images {
 	display: block;
 	margin: 0 auto;
 }

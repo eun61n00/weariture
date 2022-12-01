@@ -82,10 +82,10 @@ a {
 	*display: inline;
 	vertical-align: top;
 }
-img {
+images {
 	vertical-align: middle;
 }
-img, fieldset {
+images, fieldset {
 	border: none;
 }
 #contents {
@@ -124,12 +124,12 @@ img, fieldset {
 	*display: inline;
 	width: 50%;
 	margin: 0 -5px -1px 0;
-	cursor: url(/img/zoom.cur),auto;
+	cursor: url(/images/zoom.cur),auto;
 }
 .detail_left.pc li div {
 	padding: 10px;
 }
-.detail_left.pc img {
+.detail_left.pc images {
 	width: 100%;
 }
 
@@ -241,7 +241,7 @@ select {
 	font-weight: inherit;
 	border: 1px solid #d7d5d5;
 	border-radius: 0;
-	background: #fff url(//img.echosting.cafe24.com/skin/mobile/common/ico_select.gif) no-repeat 100% 49%;
+	background: #fff url(//images.echosting.cafe24.com/skin/mobile/common/ico_select.gif) no-repeat 100% 49%;
 	background-size: auto 40px;
 	-webkit-appearance: none;
 }
@@ -272,7 +272,7 @@ select {
 	word-break: break-all;
 	font-weight: inherit;
 	border: 1px solid #ccc;
-	background: #fff url(//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_selectbox.gif) no-repeat right center;
+	background: #fff url(//images.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_selectbox.gif) no-repeat right center;
 	background-size: 32px 27px;
 	-webkit-border-radius: 3px;
 	-webkit-appearance: none;
@@ -290,7 +290,7 @@ textarea, input, select {
 .xans-product-detail .infoArea .xans-product-option td.selectButton {
 	text-align: right;
 }
-.xans-product-detail .infoArea img {
+.xans-product-detail .infoArea images {
 	vertical-align: middle;
 }
 .xans-product-detail .infoArea .guideArea {
@@ -301,14 +301,14 @@ textarea, input, select {
 	bottom: 0;
 	right: 0;
 	margin: 8px 0 0;
-	background: url(//img.echosting.cafe24.com/skin/base_ko_KR/product/ico_sizeGuide.gif) no-repeat 0 3px;
+	background: url(//images.echosting.cafe24.com/skin/base_ko_KR/product/ico_sizeGuide.gif) no-repeat 0 3px;
 }
 .xans-product-detail .infoArea .sizeGuide a {
 	display: inline-block;
 	padding: 2px 15px 2px 24px;
 	color: #353535;
 	vertical-align: top;
-	background: url(//img.echosting.cafe24.com/skin/base_ko_KR/product/ico_sizeGuide_go.gif) no-repeat 100% 6px;
+	background: url(//images.echosting.cafe24.com/skin/base_ko_KR/product/ico_sizeGuide_go.gif) no-repeat 100% 6px;
 }
 #totalProducts {
 	margin: 21px 0 0;
