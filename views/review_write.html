@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% block content %}
+<div id="contents">
+	<div>
+	<section id="contact-us" class="contact-us section">
+	<div style="margin: 50px">
+		<div class="form-main">
+		<div class="form-title">
+		<h2>리뷰 작성</h2>
+		<p>소중한 리뷰를 작성해주세요.</p>
+		</div>
+			<form class="form" method="post" action="/review/write">
+			<div class="row">
+				<div class="col-lg-6 col-12">
+					<div class="form-group">
+					<input name="cus_name" type="text" placeholder="Your Name" required="required">
+					</div>
+				</div>
+				<div class="col-lg-6 col-12">
+					<div class="form-group">
+						<select class="form-select" aria-label="Default select example" name="pro_name">
+							<option selected>제품명</option>
+							{% for i in review %}
+							<option>{{i.dataValues.pro_name}}</option>
+							{% endfor %}
+						</select>
+					</div>
+				</div>
+				<div class="col-lg-6 col-12">
+					<div class="form-group">
+						<select class="form-select" aria-label="Default select example" name="cate">
+							<option selected>카테고리</option>
+							{% for i in review %}
+							<option>{{i.dataValues.cate}}</option>
+							{% endfor %}
+						</select>
+					</div>
+				</div>
+				<div class="col-lg-6 col-12">
+					<div class="form-group">
+						<select class="form-select" aria-label="Default select example" name="rate">
+							<option selected>별점</option>
+							<option value="5">5점</option>
+							<option value="4">4점</option>
+							<option value="3">3점</option>
+							<option value="2">2점</option>
+							<option value="1">1점</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="form-group message">
+						<textarea name="review_content" placeholder="리뷰를 작성해주세요."></textarea>
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="form-group button">
+						<button type="submit" class="btn ">리뷰 게시</button>
+					</div>
+				</div>
+			</div>
+			</form>
+		</div>
+		</div>
+	</div>
+	</section>
+</div>
+{% endblock %}

@@ -1,235 +1,103 @@
-<!DOCTYPE html>
-<html class="no-js" lang="zxx">
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="x-ua-compatible" content="ie=edge" />
-	<title>Contact Us - Appmeet Startup, App & SaaS HTML Template.</title>
-	<meta name="description" content="" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
-	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-	<link rel="stylesheet" href="/styles/LineIcons.2.0.css" />
-	<link rel="stylesheet" href="/styles/animate.css" />
-	<link rel="stylesheet" href="/styles/tiny-slider.css" />
-	<link rel="stylesheet" href="styles/glightbox.min.css" />
-	<link rel="stylesheet" href="/styles/main.css" />
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGk_Tu1zy8OayR38v1tjjYBS-ZWrI8Q9w&callback=initMap&region=kr"></script>
-	<script async defer src="/js/googlemap.js"></script>
-</head>
-
-<body>
-
-	<div class="nav-container">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="container-fluid">
-				<a href="/"><img src="/images/logo.png" style="height:35px; margin:0px 40px"></a>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="about">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="product">Products</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="review">Review</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="contact">Contact Us</a>
-						</li>
-					</ul>
-					<div id="user" class="d-flex">
-						<form class="d-flex" action="/user/login" method="post">
-							<input class="form-control me-2" type="userId" placeholder="ID" aria-label="ID" name="id">
-							<input class="form-control me-2" type="userPassword" placeholder="Password" aria-label="Password" name="password">
-							<button class="btn btn-outline-success" type="submit" style="margin: 0px 7px 0px 0px">Login</button>
-						</form>
-						<form class="d-flex" action="/user/register" method="get">
-							<button class="btn btn-outline-success" type="submit">Join</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</nav>
-	</div>
-	{% block content %}
-	<div id="contents">
-		<center>
-		<div class="xans-element- xans-board xans-board-listpackage-4 xans-board-listpackage xans-board-4 ">
-			<div class="xans-element- xans-board xans-board-title-4 xans-board-title xans-board-4 ">
-			<h2>
-				<font color="#555555">REVIEW</font>
-			</h2>
-			<span>
-				<b>REVIEW 작성해주시면 착샷 - 1000원/ 글 - 500원
+{% extends "layout.html" %}
+{% block content %}
+<div id="contents">
+	<center>
+	<div class="xans-element- xans-board xans-board-listpackage-4 xans-board-listpackage xans-board-4 ">
+		<div class="xans-element- xans-board xans-board-title-4 xans-board-title xans-board-4 ">
+		<br>
+		<h2>
+			<font color="#3AB449">REVIEW</font>
+		</h2>
+		<span style="margin: 20px">
+			<b>리뷰 작성시, 포인트 지급(착샷 1000원, 글 500원)<br>
+				※ 리뷰내용이 아닐경우 자동 삭제되는 점 양해부탁드립니다.
+			</b>
+		</span>
+		<div style="margin: 0px 0px 20px 0px">
+			<a href="review/write"><button class="btn btn-outline-success">리뷰 작성하기</button></a>
+		</div>
+		<div class="ec-base-table typeList gBorder" style="width: 1000px">
+			<table class="table table-hover">
+				<caption>상품 게시판 목록</caption>
+				<colgroup
+					class="xans-element- xans-board xans-board-listheader-4 xans-board-listheader xans-board-4 ">
+					<col style="width:70px;">
+					<col style="width:150px;">
+					<col style="width:130px;" class="displaynone">
+					<col style="width:auto;">
+					<col style="width:84px;">
+					<col style="width:77px;" class="displaynone">
+					<col style="width:55px;" class="">
+					<col style="width:55px;" class="displaynone">
+					<col style="width:80px;" class="displaynone">
+				</colgroup>
+				<thead
+					class="xans-element- xans-board xans-board-listheader-4 xans-board-listheader xans-board-4 "
+					style="text-align: center">
+					<tr style=" ">
+						<th scope="col"> 번호</th>
+						<th scope="col">상품정보</th>
+						<th scope="col" class="displaynone">카테고리</th>
+						<th scope="col">제목</th>
+						<th scope="col">작성자</th>
+						<th scope="col" class="displaynone">작성일</th>
+						<th scope="col" class="">조회</th>
+						<th scope="col" class="displaynone">추천</th>
+						<th scope="col" class="displaynone">평점</th>
+					</tr>
+				</thead>
+				<tbody
+					class="xans-element- xans-board xans-board-list-4 xans-board-list xans-board-4 center">
+					{% for i in review %}
+					<tr style="background-color:#FFFFFF; color:#555555;" class="xans-record-">
+						<td> {{i.dataValues.id}}</td>
+						<td class="thumb left"><a href="">
+								<span style="color: #3AB449">{{i.dataValues.pro_name}}</span></a></td>
+						<td class="displaynone">
+							<p>
+								<center>{{i.dataValues.cate}}</center>
+							</p>
+						</td>
+						<td class="subject left txtBreak">
+							<span class="displaynone">
+								<a href="#none" onclick="BOARD.viewTarget('188513','4',this);"></a>
+							</span>
+							<a href="" style="color:#555555;">{{i.dataValues.tit}}</a>
+							<span class="txtEm"></span>
+						</td>
+						<td>{{i.dataValues.cus_name}}</td>
+						<td class="displaynone"><span class="txtNum">{{i.dataValues.re_date}}</span>
+						</td>
+						<td class=""><span class="txtNum">{{i.dataValues.view}}</span></td>
+						<td class="displaynone"><span class="txtNum">{{i.dataValues.rec}}</span>
+						</td>
+						<td class="displaynone">
+							<p>
+								<center>{{i.dataValues.rate}}</center>
+							</p>
+						</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+			<p
+				class="xans-element- xans-board xans-board-empty-4 xans-board-empty xans-board-4 message displaynone ">
+			</p>
+		</div>
+		<div
+			class="xans-element- xans-board xans-board-buttonlist-4 xans-board-buttonlist xans-board-4 displaynone ec-base-button typeBG ">
+			<span class="gRight">
+				<a href="" class="displaynone">
 					<br>
-					<br>
-					※ 리뷰내용이 아닐경우 자동삭제되는점 양해부탁드립니다.
-				</b>
+					리뷰날짜:
+					<input type="date" id="reviewdate" name="reviewdate">&nbsp;&nbsp;&nbsp;
+					내용검색:
+					<input type="text" id="username" name="username">&nbsp;&nbsp;
+					<input type="submit" value="search"><br>&nbsp;
+				</a>
 			</span>
-			<div class="ec-base-table typeList gBorder" style="width: 1000px">
-				<table class="table table-hover">
-					<caption>상품 게시판 목록</caption>
-					<colgroup
-						class="xans-element- xans-board xans-board-listheader-4 xans-board-listheader xans-board-4 ">
-						<col style="width:70px;">
-						<col style="width:150px;">
-						<col style="width:130px;" class="displaynone">
-						<col style="width:auto;">
-						<col style="width:84px;">
-						<col style="width:77px;" class="displaynone">
-						<col style="width:55px;" class="">
-						<col style="width:55px;" class="displaynone">
-						<col style="width:80px;" class="displaynone">
-					</colgroup>
-					<thead
-						class="xans-element- xans-board xans-board-listheader-4 xans-board-listheader xans-board-4 "
-						style="text-align: center">
-						<tr style=" ">
-							<th scope="col"> 번호</th>
-							<th scope="col">상품정보</th>
-							<th scope="col" class="displaynone">카테고리</th>
-							<th scope="col">제목</th>
-							<th scope="col">작성자</th>
-							<th scope="col" class="displaynone">작성일</th>
-							<th scope="col" class="">조회</th>
-							<th scope="col" class="displaynone">추천</th>
-							<th scope="col" class="displaynone">평점</th>
-						</tr>
-					</thead>
-					<tbody
-						class="xans-element- xans-board xans-board-list-4 xans-board-list xans-board-4 center">
-						{% for i in review %}
-						<tr style="background-color:#FFFFFF; color:#555555;" class="xans-record-">
-							<td> {{i.dataValues.id}}</td>
-							<td class="thumb left"><a href="">
-									<span>{{i.dataValues.pro_name}}</span></a></td>
-							<td class="displaynone">
-								<p>
-									<center>{{i.dataValues.cate}}</center>
-								</p>
-							</td>
-							<td class="subject left txtBreak">
-								<span class="displaynone">
-									<a href="#none" onclick="BOARD.viewTarget('188513','4',this);"></a>
-								</span>
-								<a href="" style="color:#555555;">{{i.dataValues.tit}}</a>
-								<span class="txtEm"></span>
-							</td>
-							<td>{{i.dataValues.cus_name}}</td>
-							<td class="displaynone"><span class="txtNum">{{i.dataValues.re_date}}</span>
-							</td>
-							<td class=""><span class="txtNum">{{i.dataValues.view}}</span></td>
-							<td class="displaynone"><span class="txtNum">{{i.dataValues.rec}}</span>
-							</td>
-							<td class="displaynone">
-								<p>
-									<center>{{i.dataValues.rate}}</center>
-								</p>
-							</td>
-						</tr>
-						{% endfor %}
-					</tbody>
-				</table>
-				<p
-					class="xans-element- xans-board xans-board-empty-4 xans-board-empty xans-board-4 message displaynone ">
-				</p>
-			</div>
-			<div
-				class="xans-element- xans-board xans-board-buttonlist-4 xans-board-buttonlist xans-board-4 displaynone ec-base-button typeBG ">
-				<span class="gRight">
-					<a href="" class="displaynone">
-						<br>
-						리뷰날짜:
-						<input type="date" id="reviewdate" name="reviewdate">&nbsp;&nbsp;&nbsp;
-						내용검색:
-						<input type="text" id="username" name="username">&nbsp;&nbsp;
-						<input type="submit" value="search"><br>&nbsp;
-					</a>
-				</span>
-			</div>
 		</div>
-	</center>
 	</div>
-	{% endblock %}
-	<!-- Footer -->
-	<footer class="text-center text-lg-start bg-light text-muted">
-		<!-- Section: Social media -->
-		<section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-			<!-- Left -->
-			<div class="me-5 d-none d-lg-block">
-			<span>Get connected with us on social networks:</span>
-			</div>
-			<div>
-				<a href="https://www.seoultech.ac.kr/index.jsp" class="me-4 text-reset">
-					<i class="fab fa-instagram">Instagram</i>
-				</a>
-				<a href="https://www.youtube.com/@seoultech486" class="me-4 text-reset">
-					<i class="fab fa-youtube">Youtube</i>
-				</a>
-				<a href="https://github.com/eun61n00/weariture" class="me-4 text-reset">
-					<i class="fab fa-github">Github</i>
-				</a>
-			</div>
-		</section>
-		<!-- Section: Social media -->
-
-		<!-- Section: Links -->
-		<section class="">
-			<div class="container text-center text-md-start mt-5">
-				<div class="row mt-3">
-					<!-- Grid column -->
-					<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-					<!-- Content -->
-						<h6 class="text-uppercase fw-bold mb-4">
-							<i class="bi bi-building"></i>(주)웨어네이처 인더스트리
-						</h6>
-						<p>
-							환경 보존을 실천하고 개개인의 개성을 살린 옷의 가치를 추구하고 연구하는 팩토리 브랜드 컴퍼니입니다.<br />
-							<p class="fw-bold">OWNER</p>
-							<p>권은빈 박상현</p>
-						</p>
-					</div>
-
-					<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-						<h6 class="text-uppercase fw-bold mb-4">
-							BUSINESS LICENSE
-						</h6>
-						<p>457-81-15987</p>
-						<h6 class="text-uppercase fw-bold mb-4">
-							ONLINE LICENSE
-						</h6>
-						<p>2022-서울노원-0785</p>
-					</div>
-					<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-						<h6 class="text-uppercase fw-bold mb-4">
-							Bank info
-						</h6>
-						<p>신한은행 100-034-100154</p>
-						<p>(주)웨어네이처</p>
-					</div>
-
-					<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-						<h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-						<p><i class="fas fa-home me-3"></i>서울시 노원구 공릉로 232 서울과학기술대학교</p>
-						<p>
-							<i class="fas fa-envelope me-3"></i>
-							info@weariture.com
-						</p>
-						<p><i class="fas fa-phone me-3"></i>
-							02) 970-6114 (MON-FRI 10:00 - 18:00)
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Section: Links -->
-
-		<!-- Copyright -->
-		<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-			© 2022 COPYRIGHT WEARITURE INDUSTRY, ALL RIGHTS RESERVED.
-			<a class="text-reset fw-bold" href="main">weariture.com</a>
-		</div>
-		<!-- Copyright -->
-</html>
+	</center>
+</div>
+{% endblock %}
