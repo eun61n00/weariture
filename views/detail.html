@@ -1,57 +1,8 @@
-<!DOCTYPE html>
-<html class="no-js" lang="zxx">
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="x-ua-compatible" content="ie=edge" />
-	<title>Contact Us - Appmeet Startup, App & SaaS HTML Template.</title>
-	<meta name="description" content="" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
-	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-	<link rel="stylesheet" href="/styles/LineIcons.2.0.css" />
-	<link rel="stylesheet" href="/styles/animate.css" />
-	<link rel="stylesheet" href="/styles/tiny-slider.css" />
-	<link rel="stylesheet" href="styles/glightbox.min.css" />
-	<!-- <link rel="stylesheet" href="/styles/detail_style.css" /> -->
-</head>
-
-<body>
-
-	<div class="nav-container">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="container-fluid">
-				<a href="/"><img src="/images/logo.png" style="height:35px; margin:0px 40px"></a>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="about">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="product">Products</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="review">Review</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="contact">Contact Us</a>
-						</li>
-					</ul>
-					<div id="user" class="d-flex">
-						<form class="d-flex" action="/user/login" method="post">
-							<input class="form-control me-2" type="userId" placeholder="ID" aria-label="ID" name="id">
-							<input class="form-control me-2" type="userPassword" placeholder="Password" aria-label="Password" name="password">
-							<button class="btn btn-outline-success" type="submit" style="margin: 0px 7px 0px 0px">Login</button>
-						</form>
-						<form class="d-flex" action="/user/register" method="get">
-							<button class="btn btn-outline-success" type="submit">Join</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</nav>
-	</div>
-
+{% extends "layout.html" %}
+{% block style %}
+	<link rel="stylesheet" href="/styles/detail_style.css">
+{% endblock %}
+{% block content %}
 	<div id="contents">
 		<style>.detail_info span{color:#000!important;}</style>
 		<div class="detail_wrap_outer">
@@ -60,27 +11,27 @@
 					<ul>
 						<li>
 							<div>
-								<img src="./images/d1.jpg" data-result="success" data-name="d1.jpg" data-size="2000px/2600px" data-filesize="1,93 MB" data-error="" style="display: block; float: none; vertical-align: top; margin: 0px auto; text-align: center;">
+								<img src="./images/d1.jpg" height="300px">
 							</div>
 						</li>
 						<li>
 							<div>
-								<img src="./images/d2.jpg" data-result="success" data-name="d2.jpg" data-size="2000px/2600px" data-filesize="1,93 MB" data-error="" style="display: block; float: none; vertical-align: top; margin: 0px auto; text-align: center;">
+								<img src="./images/d2.jpg" height="300px">
 							</div>
 						</li>
 						<li>
 							<div>
-								<img src="./images/d3.jpg" data-result="success" data-name="d3.jpg" data-size="2000px/2600px" data-filesize="1,93 MB" data-error="" style="display: block; float: none; vertical-align: top; margin: 0px auto; text-align: center;">
+								<img src="./images/d3.jpg" height="300px">
 							</div>
 						</li>
 						<li>
 							<div>
-								<img src="./images/d4.jpg" data-result="success" data-name="d4.jpg" data-size="2000px/2600px" data-filesize="1,93 MB" data-error="" style="display: block; float: none; vertical-align: top; margin: 0px auto; text-align: center;">
+								<img src="./images/d4.jpg" height="300px">
 							</div>
 						</li>
 						<li>
 							<div>
-								<img src="./images/d5.jpg" data-result="success" data-name="d5.jpg" data-size="2000px/2600px" data-filesize="1,93 MB" data-error="" style="display: block; float: none; vertical-align: top; margin: 0px auto; text-align: center;">
+								<img src="./images/d5.jpg" height="300px">
 							</div>
 						</li>
 					</ul>
@@ -88,19 +39,6 @@
 				<div class="detail_right_wrap">
 					<div class="detail_right infoArea">
 						<div>
-							<style>
-								#NewProductQuantityDummy{display:none;}
-								.detail_info {text-align:center;}
-								.detail_info th{display:none;}
-								.detail_button{margin-top:10px;}
-								.detail_option{margin:10px 0 10px 0;}
-								.detail_option select{width:100%!important; margin-bottom:5px; max-width:100%!important;}
-								.customSelect{border:0; border:2px solid #aaa; border-radius:5px; background-image:url(/images/select_bg.gif); background-position:center right; background-repeat:no-repeat; height:30px; padding:10px; line-height:30px;}
-								.customSelect.customSelectHover{border:2px solid #000;}
-								.customSelect.customSelectFocus{border:2px solid #000;}
-								select{width:100%; max-width:345px;}
-								.sns_wrap images{height:15px!important;}
-							</style>
 							<div class="xans-element- xans-product xans-product-detaildesign">
 								<table border="1" summary="" class="detail_info">
 									<caption> 기본 정보</caption>
@@ -174,89 +112,4 @@
 			</div>
 		</div>
 	</div>
-
-
-
-
-
-
-	<style>
-		#footer_wrap{border-top:1px solid #000;}
-		#footer{width:100%; display:table; padding-top:24px;  line-height:18px;}
-		#footer .bold{font-weight:bold;}
-		#footer .blank{display:block;height:17px;}
-		#footer .grey{color:#898989;}
-		.footer_left{float:left; padding-left:40px;}
-		.footer_left a{display:block;}
-		.footer_right{float:right;}
-		.footer_right .inline-top{padding-right:120px;}
-		.footer_right .inline-top .bold{font-weight:bold;}
-		.footer_right .inline-top .blank{display:block; height:17px;}
-		.footer_right .inline-top .grey{color:.898989;}
-		.footer_right .about a{font-weight:bold; padding-right:10px;}
-
-		.copyright{clear:both; width:100%; text-align:center; padding:80px 0 27px 0;}
-
-
-
-
-
-
-
-	</style>
-	<div id="footer_wrap">
-		<div id="footer">
-			<div class="footer_left">
-				<a href="https://www.seoultech.ac.kr/index.jsp" target="_blank">INSTAGRAM</a>
-				<a href="https://www.seoultech.ac.kr/index.jsp" target="_blank">YOUTUBE</a>
-				<p class="blank"></p>
-			</div>
-			<div class="footer_right">
-				<div class="inline-top">
-					<p class="bold">02)970.6114</p>
-					<p class="blank"></p>
-					<p>MON-FRI 10:00 ~ 18:00</p>
-					<p>WEEKEND. HOLIDAY OFF</p>
-			   </div>
-			   <div class="inline-top">
-					<p class="grey">ADDRESS</p>
-					<p>서울시 노원구 공릉로 232 </p>
-					<p>서울과학기술대학교</p>
-					<p class="blank"></p>
-
-					<p class="blank"></p>
-					<p class="grey">BANK INFO</p>
-					<p>신한은행 100-034-100154</p>
-					<p>(주)웨어네이처</p>
-					<p class="blank"></p>
-				</div>
-				<div class="inline-top">
-					<div class="about">
-						<a href="">AGREEMENT</a>
-						<a href="">PRIVACY POLICY</a>
-						<a href="">GUIDE</a>
-					</div>
-					<p class="blank"></p>
-					<p>
-						<span class="grey">COMPANY</span>
-						<span>(주)웨어네이처 인더스트리</span>
-					</p>
-					<p>
-						<span class="grey">OWNER</span>
-						<span>김창엽 박상현 이은송 조장훈</span>
-					</p>
-					<p>
-						<span class="grey">BUSINESS LICENSE</span>
-						<span>457-81-15987</span>
-					</p>
-					<p>
-						<span class="grey">ONLINE LICENSE</span>
-						<span>2022-서울노원-0785</span>
-					</p>
-				</div>
-			</div>
-			<div class="copyright">COPYRIGHT © WEARITURE INDUSTRY, ALL RIGHTS RESERVED.</div>
-		</div>
-	</div>
-</body>
-</html>
+{% endblock %}
