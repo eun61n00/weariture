@@ -1,6 +1,7 @@
 const express = require("express");
-const Review = require("../models/review");
+const { Model } = require("sequelize");
 const router = express.Router();
+const Review = require("../models/review");
 
 router.get("/", async (req, res) => {
 	const review = await Review.findAll({});

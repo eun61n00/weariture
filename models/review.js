@@ -58,7 +58,7 @@ module.exports = class Review extends Sequelize.Model {
 		);
 	}
 	static associate(db) {
-		db.Review.belongsTo(db.User);
-		db.Review.belongsTo(db.Location);
+		// db.Review.belongsTo(db.User);
+		// db.Review.belongsTo(db.Location);
 	}
 };
