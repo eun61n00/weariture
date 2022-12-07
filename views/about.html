@@ -1,63 +1,10 @@
-<!DOCTYPE html>
-<html class="no-js" lang="zxx">
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="x-ua-compatible" content="ie=edge" />
-	<title>Contact Us - Appmeet Startup, App & SaaS HTML Template.</title>
-	<meta name="description" content="" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
-	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-	<link rel="stylesheet" href="/styles/LineIcons.2.0.css" />
-	<link rel="stylesheet" href="/styles/animate.css" />
-	<link rel="stylesheet" href="/styles/tiny-slider.css" />
-	<link rel="stylesheet" href="styles/glightbox.min.css" />
-	<link rel="stylesheet" href="/styles/main.css" />
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGk_Tu1zy8OayR38v1tjjYBS-ZWrI8Q9w&callback=initMap&region=kr"></script>
-	<script async defer src="/js/googlemap.js"></script>
-</head>
-
-<body>
-
-	<div class="nav-container">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="container-fluid">
-				<a href="/"><img src="/images/logo.png" style="height:35px; margin:0px 40px"></a>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="about">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="product">Products</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="review">Review</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="contact">Contact Us</a>
-						</li>
-					</ul>
-					<div id="user" class="d-flex">
-						<form class="d-flex" action="/user/login" method="post">
-							<input class="form-control me-2" type="userId" placeholder="ID" aria-label="ID" name="id">
-							<input class="form-control me-2" type="userPassword" placeholder="Password" aria-label="Password" name="password">
-							<button class="btn btn-outline-success" type="submit" style="margin: 0px 7px 0px 0px">Login</button>
-						</form>
-						<form class="d-flex" action="/user/register" method="get">
-							<button class="btn btn-outline-success" type="submit">Join</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</nav>
-	</div>
+{% extends "layout.html" %}
+{% block content %}
 
 	<div id="contents">
 		<div class="container-fluid text-center" style="padding-bottom: 10px;">
 			<center>
-				<img src="./images/image-green.jpg" class="images-circle" style="height: 80%; width: 40%">
+				<img src="./images/image-green.jpg" class="images-circle" style="height: 50%;margin: 30px">
 			</center>
 		</div>
 		<div class="container-fluid" style="padding-top: 10px; text-align:center; font-size: 15px;">
@@ -69,85 +16,4 @@
 			</p>
 		</div>
 	</div>
-
-	<!-- Footer -->
-	<footer class="text-center text-lg-start bg-light text-muted">
-		<!-- Section: Social media -->
-		<section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-			<!-- Left -->
-			<div class="me-5 d-none d-lg-block">
-			<span>Get connected with us on social networks:</span>
-			</div>
-			<div>
-				<a href="https://www.seoultech.ac.kr/index.jsp" class="me-4 text-reset">
-					<i class="fab fa-instagram">Instagram</i>
-				</a>
-				<a href="https://www.youtube.com/@seoultech486" class="me-4 text-reset">
-					<i class="fab fa-youtube">Youtube</i>
-				</a>
-				<a href="https://github.com/eun61n00/weariture" class="me-4 text-reset">
-					<i class="fab fa-github">Github</i>
-				</a>
-			</div>
-		</section>
-		<!-- Section: Social media -->
-
-		<!-- Section: Links -->
-		<section class="">
-			<div class="container text-center text-md-start mt-5">
-				<div class="row mt-3">
-					<!-- Grid column -->
-					<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-					<!-- Content -->
-						<h6 class="text-uppercase fw-bold mb-4">
-							<i class="bi bi-building"></i>(주)웨어네이처 인더스트리
-						</h6>
-						<p>
-							환경 보존을 실천하고 개개인의 개성을 살린 옷의 가치를 추구하고 연구하는 팩토리 브랜드 컴퍼니입니다.<br />
-							<p class="fw-bold">OWNER</p>
-							<p>권은빈 박상현</p>
-						</p>
-					</div>
-
-					<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-						<h6 class="text-uppercase fw-bold mb-4">
-							BUSINESS LICENSE
-						</h6>
-						<p>457-81-15987</p>
-						<h6 class="text-uppercase fw-bold mb-4">
-							ONLINE LICENSE
-						</h6>
-						<p>2022-서울노원-0785</p>
-					</div>
-					<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-						<h6 class="text-uppercase fw-bold mb-4">
-							Bank info
-						</h6>
-						<p>신한은행 100-034-100154</p>
-						<p>(주)웨어네이처</p>
-					</div>
-
-					<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-						<h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-						<p><i class="fas fa-home me-3"></i>서울시 노원구 공릉로 232 서울과학기술대학교</p>
-						<p>
-							<i class="fas fa-envelope me-3"></i>
-							info@weariture.com
-						</p>
-						<p><i class="fas fa-phone me-3"></i>
-							02) 970-6114 (MON-FRI 10:00 - 18:00)
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Section: Links -->
-
-		<!-- Copyright -->
-		<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-			© 2022 COPYRIGHT WEARITURE INDUSTRY, ALL RIGHTS RESERVED.
-			<a class="text-reset fw-bold" href="main">weariture.com</a>
-		</div>
-		<!-- Copyright -->
-	</footer>
-</body>
+{% endblock %}

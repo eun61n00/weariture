@@ -1,7 +1,6 @@
 const express = require("express");
 const { Model } = require("sequelize");
 const User = require("../models/user");
-
 const router = express.Router();
 
 
@@ -51,6 +50,7 @@ router.post('/register', function(req, res) {
 });
 
 router.get('/login', (req, res) => {
+	console.log('로그인 페이지 진입');
 	res.render('login');
 });
 

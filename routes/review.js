@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require("express");
 const { Model } = require("sequelize");
 const router = express.Router();
@@ -25,12 +26,12 @@ router.post("/write", async(req, res) => {
 		rec: 0,
 		rate: req.body.rate
 	})
-	.then(function(createReviewRecord) {
-		// TODO review 페이지 다시 렌더링
-		review = Review.findAll({});
-		console.log(review);
-		res.render('review', { review });
-	});
+	res.redirect(path.join(__dirname + "review"));
+	// .then(function(createReviewRecord) {
+	// 	review = Review.findAll({});
+	// 	console.log(review);
+	// 	res.render('review', { review });
+	// });
 
 })
 

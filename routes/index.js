@@ -1,8 +1,9 @@
 const express = require('express');
+const path = require('path');
+const rootdir = process.env.path;
 
 const router = express.Router();
 
-const rootdir = process.env.path;
 
 router.get('/', function(req, res) {
 	if (!req.session.loggedin) {
@@ -10,6 +11,7 @@ router.get('/', function(req, res) {
 		req.session.idx = -1
 	}
 	res.render('main');
+	// res.render(path.join(__dirname + 'main'));
 });
 
 router.get('/about', (req, res) => {
