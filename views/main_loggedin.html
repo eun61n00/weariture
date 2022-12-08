@@ -45,11 +45,9 @@
 					</div>
 				</div>
 				<div id="user" class="d-flex">
-					<form class="d-flex" action="/user/login" method="get">
-						<button class="btn btn-outline-success" type="submit" style="margin: 0px 7px 0px 0px">Login</button>
-					</form>
-					<form class="d-flex" action="/user/register" method="get">
-						<button class="btn btn-outline-success" type="submit">Join</button>
+					<p style="margin: 8px 10px 0px 0px; font-weight:700; font-size:large;">{{username}}님, 안녕하세요.</p>
+					<form method="get" action="/user/logout">
+						<button class="btn btn-outline-success">Logout</button>
 					</form>
 				</div>
 			</div>
@@ -57,7 +55,15 @@
 	</div>
 
 	{% block content %}
-
+	<div id="contents">
+		<div class="section only_pc">
+			<div class="box">
+				<a href="" style="display: block;">
+					<img src="./images/main.jpg" style="padding-top: 50px; display: block; margin-left: auto; margin-right: auto;">
+				</a>
+			</div>
+		</div>
+	</div>
     {% endblock %}
 
 <!-- Footer -->

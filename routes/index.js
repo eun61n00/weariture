@@ -6,12 +6,13 @@ const router = express.Router();
 
 
 router.get('/', function(req, res) {
-	if (!req.session.loggedin) {
-		req.session.loggedin = false
-		req.session.idx = -1
+	if (req.session.loggedin == true) {
+		console.log('로그인 세션 유지 성공');
+		console.log(req.session.username);
+		res.render('main_loggedin', {username: req.session.username});
+	} else {
+		res.render('main');
 	}
-	res.render('main');
-	// res.render(path.join(__dirname + 'main'));
 });
 
 router.get('/about', (req, res) => {

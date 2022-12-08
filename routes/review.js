@@ -26,12 +26,7 @@ router.post("/write", async(req, res) => {
 		rec: 0,
 		rate: req.body.rate
 	})
-	res.redirect(path.join(__dirname + "review"));
-	// .then(function(createReviewRecord) {
-	// 	review = Review.findAll({});
-	// 	console.log(review);
-	// 	res.render('review', { review });
-	// });
+	res.redirect('/review');
 
 })
 
