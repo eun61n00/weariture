@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
+<html>
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -8,15 +8,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
 	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+	{% block style %}
+
+	{% endblock %}
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 	<link rel="stylesheet" href="/styles/LineIcons.2.0.css" />
 	<link rel="stylesheet" href="/styles/animate.css" />
 	<link rel="stylesheet" href="/styles/tiny-slider.css" />
 	<link rel="stylesheet" href="styles/glightbox.min.css" />
 	<link rel="stylesheet" href="/styles/main.css" />
-	{% block style %}
 
-	{% endblock %}
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGk_Tu1zy8OayR38v1tjjYBS-ZWrI8Q9w&callback=initMap&region=kr"></script>
 	<script async defer src="/js/googlemap.js"></script>
 </head>
@@ -44,14 +45,29 @@
 					</ul>
 					</div>
 				</div>
-				<div id="user" class="d-flex">
-					<form class="d-flex" action="/user/login" method="get">
-						<button class="btn btn-outline-success" type="submit" style="margin: 0px 7px 0px 0px">Login</button>
-					</form>
-					<form class="d-flex" action="/user/register" method="get">
-						<button class="btn btn-outline-success" type="submit">Join</button>
-					</form>
-				</div>
+				{% block user %}
+				{% if loggedin %}
+					<div id="user" class="d-flex">
+						<p style="margin: 8px 10px 0px 0px; font-weight:700; font-size:large;">{{username}}님, 안녕하세요.</p>
+						<form method="get" action="/user/logout">
+							<button class="btn btn-outline-success" style="margin: 0px 3px 0px 0px">Logout</button>
+						</form>
+						<form method="get" action="/user/mypage">
+							<button class="btn btn-outline-primary">My Page</button>
+						</form>
+					</div>
+				{% else %}
+					<!-- TODO 로그인 안했을 때 보여 줄 태그 작성 -->
+					<div id="user" class="d-flex">
+						<form class="d-flex" action="/user/login" method="get">
+							<button class="btn btn-outline-success" type="submit" style="margin: 0px 7px 0px 0px">Login</button>
+						</form>
+						<form class="d-flex" action="/user/register" method="get">
+							<button class="btn btn-outline-success" type="submit">Join</button>
+						</form>
+					</div>
+				{% endif %}
+				{% endblock %}
 			</div>
 		</nav>
 	</div>
