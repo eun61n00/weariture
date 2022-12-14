@@ -1,115 +1,177 @@
-{% extends "layout.html" %}
-{% block style %}
-	<link rel="stylesheet" href="/styles/detail_style.css">
-{% endblock %}
-{% block content %}
-	<div id="contents">
-		<style>.detail_info span{color:#000!important;}</style>
-		<div class="detail_wrap_outer">
-			<div class="xans-element- xans-product xans-product-detail detail_wrap">
-				<div class="xans-element- xans-product xans-product-image detail_left pc">
-					<ul>
-						<li>
-							<div>
-								<img src="./images/d1.jpg" height="300px">
-							</div>
-						</li>
-						<li>
-							<div>
-								<img src="./images/d2.jpg" height="300px">
-							</div>
-						</li>
-						<li>
-							<div>
-								<img src="./images/d3.jpg" height="300px">
-							</div>
-						</li>
-						<li>
-							<div>
-								<img src="./images/d4.jpg" height="300px">
-							</div>
-						</li>
-						<li>
-							<div>
-								<img src="./images/d5.jpg" height="300px">
-							</div>
-						</li>
-					</ul>
-				</div>
-				<div class="detail_right_wrap">
-					<div class="detail_right infoArea">
-						<div>
-							<div class="xans-element- xans-product xans-product-detaildesign">
-								<table border="1" summary="" class="detail_info">
-									<caption> 기본 정보</caption>
-									<tbody>
-										<tr class=" xans-record-">
-										<th class="title"><span style="font-size:14px;color:#000000;font-weight:bold;">상품명</span></th>
-														<td><span style="font-size:14px;color:#000000;font-weight:bold;">605 HARD TWIST DENIM MOCHA BROWN JEANS [RELAX STRAIGHT]</span></td>
-													</tr>
-										<tr class=" xans-record-">
-										<th class="title"><span style="font-size:12px;color:#9e9e9e;">할인 기간</span></th>
-														<td><span style="font-size:12px;color:#9e9e9e;"><span style="color:#4d75da;"><span class="product_promotion_date">남은시간 10일 04:19:04</span> (₩5,150 할인)</span><span class="period">2022-04-25 00:00 ~ 2022-05-25 23:55</span></span></td>
-													</tr>
-										<tr class=" xans-record-">
-										<th class="title"><span style="font-size:12px;color:#9e9e9e;">판매가</span></th>
-														<td><span style="font-size:12px;color:#9e9e9e;"><strong id="span_product_price_text" style="text-decoration: line-through;">₩103,000</strong><input id="product_price" name="product_price" value="" type="hidden"></span></td>
-													</tr>
-										<tr class=" xans-record-">
-										<th class="title"><span style="font-size:12px;color:#9e9e9e;">회원할인가</span></th>
-														<td><span><span style="font-size:12px;color:#9e9e9e;"><span id="span_product_price_sale">₩97,850 <span style="font-size:12px;color:#555555;">(₩5,150 할인)</span> </span></span></span></td>
-													</tr>
-										<tr class=" xans-record-">
-										<th class="title"><span style="font-size:12px;color:#555555;">배송비</span></th>
-														<td><span style="font-size:12px;color:#555555;"><span class="delv_price_B"><input id="delivery_cost_prepaid" name="delivery_cost_prepaid" value="P" type="hidden"><strong>₩2,500</strong> (₩50,000 이상 구매 시 무료)</span></span></td>
-													</tr>
-
-									</tbody>
-								</table>
-							</div>
-							<table border="1" summary="" class="xans-element- xans-product xans-product-option detail_option xans-record-">
-								<caption>상품 옵션</caption>
-								<tbody></tbody>
-								<tbody class="xans-element- xans-product xans-product-option xans-record-">
-									<tr>
-										<td>
-											<p>사이즈</p>
-											<select option_product_no="976" option_select_element="ec-option-select-finder" option_sort_no="1" option_type="T" item_listing_type="C" option_title="사이즈" product_type="product_option" product_option_area="product_option_976_0" name="option1" id="product_option_id1" class="ProductOption0" option_style="select" required="true"><option value="*" selected="" link_image="">- [필수] 옵션을 선택해 주세요 -</option><option value="**" disabled="" link_image="">-------------------</option><optgroup label="사이즈"><option value="P0000BLO000A" link_image="">M</option><option value="P0000BLO000B" link_image="">L</option><option value="P0000BLO000C" link_image="">XL</option></optgroup></select><p class="value"></p>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<div id="totalProducts" class="">
-								<table border="1" summary="">
-									<caption>상품 목록</caption>
-									<colgroup>
-										<col style="width:auto;">
-										<col style="width:115px;">
-										<col style="width:70px;">
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col">상품명 : 2010 MAROON DENIM JACKET [BROWN]</th>
-											<th scope="col">상품수 &nbsp;&nbsp;&nbsp; <input type="number" max="10" min="1"></th>
-											<th scope="col">가격 : 14000원 </th>
-										</tr>
-									</thead>
-									<tbody class="displaynone">
-										<tr>
-											<td>2010 MAROON DENIM JACKET [BROWN]</td>
-											<td class="right">
-												<span class="quantity_price">103000</span>
-												<span class="mileage displaynone">
-													(<img src=""> &nbsp;<span class="mileage_price"></span>)
-												</span>
-											</td>
-										</tr>
-								</table>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-{% endblock %}
+{% extends "layout.html" %} {% block style %}
+<link rel="stylesheet" href="/styles/detail_style.css" />
+{% endblock %} {% block content %}
+<div id="contents">
+    <style>
+        .detail_info span {
+            color: #000 !important;
+        }
+    </style>
+    <div class="detail_wrap_outer">
+        <div class="xans-element- xans-product xans-product-detail detail_wrap">
+            <div class="xans-element- xans-product xans-product-image detail_left pc">
+                <ul>
+                    <li>
+                        <div>
+                            <img src="./images/d1.jpg" height="300px" />
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="./images/d2.jpg" height="300px" />
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="./images/d3.jpg" height="300px" />
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="./images/d4.jpg" height="300px" />
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="./images/d5.jpg" height="300px" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="detail_right_wrap">
+                <div class="detail_right infoArea">
+                    <div>
+                        <div class="xans-element- xans-product xans-product-detaildesign">
+                            <table border="1" summary="" class="detail_info">
+                                <caption>
+                                    기본 정보
+                                </caption>
+                                <tbody>
+                                    <tr class="xans-record-">
+                                        <th class="title"><span style="font-size: 14px; color: #000000; font-weight: bold">상품명</span></th>
+                                        <td>
+                                            <span style="font-size: 14px; color: #000000; font-weight: bold"
+                                                >605 HARD TWIST DENIM MOCHA BROWN JEANS [RELAX STRAIGHT]</span
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr class="xans-record-">
+                                        <th class="title"><span style="font-size: 12px; color: #9e9e9e">할인 기간</span></th>
+                                        <td>
+                                            <span style="font-size: 12px; color: #9e9e9e"
+                                                ><span style="color: #4d75da"
+                                                    ><span class="product_promotion_date">남은시간 10일 04:19:04</span> (₩5,150 할인)</span
+                                                ><span class="period">2022-04-25 00:00 ~ 2022-05-25 23:55</span></span
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr class="xans-record-">
+                                        <th class="title"><span style="font-size: 12px; color: #9e9e9e">판매가</span></th>
+                                        <td>
+                                            <span style="font-size: 12px; color: #9e9e9e"
+                                                ><strong id="span_product_price_text" style="text-decoration: line-through">₩103,000</strong
+                                                ><input id="product_price" name="product_price" value="" type="hidden"
+                                            /></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="xans-record-">
+                                        <th class="title"><span style="font-size: 12px; color: #9e9e9e">회원할인가</span></th>
+                                        <td>
+                                            <span
+                                                ><span style="font-size: 12px; color: #9e9e9e"
+                                                    ><span id="span_product_price_sale"
+                                                        >₩97,850 <span style="font-size: 12px; color: #555555">(₩5,150 할인)</span>
+                                                    </span></span
+                                                ></span
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr class="xans-record-">
+                                        <th class="title"><span style="font-size: 12px; color: #555555">배송비</span></th>
+                                        <td>
+                                            <span style="font-size: 12px; color: #555555"
+                                                ><span class="delv_price_B"
+                                                    ><input id="delivery_cost_prepaid" name="delivery_cost_prepaid" value="P" type="hidden" /><strong
+                                                        >₩2,500</strong
+                                                    >
+                                                    (₩50,000 이상 구매 시 무료)</span
+                                                ></span
+                                            >
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <table border="1" summary="" class="xans-element- xans-product xans-product-option detail_option xans-record-">
+                            <caption>
+                                상품 옵션
+                            </caption>
+                            <tbody></tbody>
+                            <tbody class="xans-element- xans-product xans-product-option xans-record-">
+                                <tr>
+                                    <td>
+                                        <p>사이즈</p>
+                                        <select
+                                            option_product_no="976"
+                                            option_select_element="ec-option-select-finder"
+                                            option_sort_no="1"
+                                            option_type="T"
+                                            item_listing_type="C"
+                                            option_title="사이즈"
+                                            product_type="product_option"
+                                            product_option_area="product_option_976_0"
+                                            name="option1"
+                                            id="product_option_id1"
+                                            class="ProductOption0"
+                                            option_style="select"
+                                            required="true"
+                                            onchange="select_size(this.value)"
+                                        >
+                                            <option value="*" selected="" link_image="">- [필수] 옵션을 선택해 주세요 -</option>
+                                            <option value="**" disabled="" link_image="">-------------------</option>
+                                            <optgroup label="사이즈">
+                                                <option value="M" link_image="">M</option>
+                                                <option value="L" link_image="">L</option>
+                                                <option value="XL" link_image="">XL</option>
+                                            </optgroup>
+                                        </select>
+                                        <p class="value"></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div id="totalProducts" class="">
+                            <table border="1" summary="">
+                                <caption>
+                                    상품 목록
+                                </caption>
+                                <colgroup>
+                                    <col style="width: auto" />
+                                    <col style="width: 115px" />
+                                    <col style="width: 70px" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">상품명 : 2010 MAROON DENIM JACKET [BROWN]</th>
+                                        <th scope="col">상품수 &nbsp;&nbsp;&nbsp; <input type="number" max="10" min="1" /></th>
+                                        <th scope="col">가격 : 14000원</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="displaynone">
+                                    <tr>
+                                        <td>2010 MAROON DENIM JACKET [BROWN]</td>
+                                        <td class="right">
+                                            <span class="quantity_price">103000</span>
+                                            <span class="mileage displaynone"> (<img src="" /> &nbsp;<span class="mileage_price"></span>) </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} {% block script %} function select_size(str) { } {% endblock %}
