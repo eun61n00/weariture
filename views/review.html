@@ -14,7 +14,14 @@
 			</b>
 		</span>
 		<div style="margin: 0px 0px 20px 0px">
-			<a href="review/write"><button class="btn btn-outline-success">리뷰 작성하기</button></a>
+			{% if loggedin %}
+			<!-- <div id="user" class="d-flex"> -->
+				<a href="review/write"><button class="btn btn-outline-success">리뷰 작성하기</button></a>
+			<!-- </div> -->
+			{% else %}
+				<a href="/user/login"><button class="btn btn-outline-success">로그인 하기</button></a>
+			{% endif %}
+			<!-- <a href="review/write"><button class="btn btn-outline-success">리뷰 작성하기</button></a> -->
 		</div>
 		<div class="ec-base-table typeList gBorder" style="width: 1000px">
 			<table class="table table-hover">
